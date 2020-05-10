@@ -1,0 +1,34 @@
+{
+  "name": "culinary-conservatory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/*.html",
+    "preview": "parcel build src/*.html --out-dir distpreview && surge distpreview --domain cc_imk.surge.sh",
+    "build": "parcel build --no-source-maps src/*.html --public-url http://www.culinaryconservatory.com/ --out-dir distpub"
+  },
+  "author": "Clemente Gomez",
+  "license": "ISC",
+  "dependencies": {
+    "parceljs": "0.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "parcel": "^1.12.4",
+    "sass": "^1.24.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+private/
+.cache/
+dist/
+distpreview/
+distpub/
