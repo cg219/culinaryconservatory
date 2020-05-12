@@ -1,5 +1,3 @@
-import "./index.scss";
-
 $('a[href^="#"]').on('click', event => {
     event.preventDefault();
 
