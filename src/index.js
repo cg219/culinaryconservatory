@@ -8,3 +8,9 @@ $('a[href^="#"]').on('click', event => {
         scrollTop: section.offset().top
     }, 900);
 });
+
+const onCardClick = event => {
+    $(event.currentTarget).toggleClass('showbio');
+}
+
+$('.card').on('click', onCardClick);
