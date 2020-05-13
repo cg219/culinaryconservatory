@@ -13,4 +13,10 @@ const onCardClick = event => {
     $(event.currentTarget).toggleClass('showbio');
 }
 
+const presentSite = () => {
+    $("body").addClass('present');
+}
+
 $('.card').on('click', onCardClick);
+
+setTimeout(presentSite, 1000);
