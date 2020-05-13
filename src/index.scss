@@ -15,6 +15,16 @@ html {
 
 body {
     font-family: 'Nunito';
+
+    &.present {
+        h2:before, h2:after {
+            width: 6rem;
+
+            @media all and (max-width: 600px) {
+                width: 20vw;
+            }
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,11 +48,12 @@ h2 {
     &:before, &:after {
         content: '';
         position: absolute;
-        width: 6rem;
         height: 2px;
         top: 50%;
         background-size: 100% 5px;
         background-repeat: no-repeat;
+        transition: .9s width ease-out;
+        width: 0;
     }
 
     &:before {
@@ -60,7 +71,6 @@ h2 {
         margin: 8vw auto 2.5vw;
 
         &:before, &:after {
-            width: 20vw;
             height: .6vw;
             background-size: 100% .8vw;
         }
