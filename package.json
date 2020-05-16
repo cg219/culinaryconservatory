@@ -15,13 +15,16 @@
     "parceljs": "0.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "autoprefixer": "^9.7.3",
-    "parcel": "^1.12.4",
-    "sass": "^1.24.0",
-    "minimist": ">=1.2.3",
-    "acorn": ">=5.7.4",
-    "kind-of": ">=6.0.3"
+    "@babel/core": "7.9.0",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "autoprefixer": "9.7.6",
+    "husky": "4.2.5",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-nuke-dist": "1.0.1",
+    "prettier": "2.0.4",
+    "pretty-quick": "2.0.1",
+    "sass": "1.26.3",
+    "surge": "0.21.3"
   },
   "browserslist": [
     "last 2 versions",
