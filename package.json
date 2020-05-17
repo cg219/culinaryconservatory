@@ -5,24 +5,26 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/*.html",
-    "preview": "parcel build src/*.html --out-dir distpreview && surge distpreview --domain cc_imk.surge.sh",
+    "dev": "parcel src/index.html",
+    "preview": "parcel build src/index.html --out-dir distpreview && surge distpreview --domain cc_imk.surge.sh",
     "build": "parcel build --no-source-maps src/*.html --public-url http://www.culinaryconservatory.com/ --out-dir distpub"
   },
   "author": "Clemente Gomez",
   "license": "ISC",
   "dependencies": {
-    "parceljs": "0.0.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "autoprefixer": "9.7.6",
     "husky": "4.2.5",
-    "parcel-bundler": "1.12.4",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-nuke-dist": "1.0.1",
-    "prettier": "2.0.4",
-    "pretty-quick": "2.0.1",
     "sass": "1.26.3",
     "surge": "0.21.3"
   },
@@ -30,6 +32,9 @@
     "last 2 versions",
     "> 1%"
   ],
+  "babel": {
+    "plugins": [ "@babel/plugin-proposal-class-properties" ]
+  },
   "postcss": {
     "plugins": {
       "autoprefixer": {
