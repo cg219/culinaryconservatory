@@ -11,6 +11,7 @@
     border-radius: 10px;
     transition: .2s transform ease-out;
     transform: scale(1);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
 
     &:hover {
         animation-name: pulse;
