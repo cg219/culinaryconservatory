@@ -1,0 +1,191 @@
+@keyframes pulse {
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: .2s transform ease-out;
+    transform: scale(1);
+
+    &:hover {
+        animation-name: pulse;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 4;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+    }
+
+    .profile-image {
+        background-image: url('https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=700');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:after {
+            content: '';
+            background-color: #000;
+            opacity: .7;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .name {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 10px;
+        position: absolute;
+        z-index: 10;
+        color: #FFF;
+        opacity: .7;
+    }
+
+    .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #FFF;
+        opacity: .7;
+        transform: translateY(0%);
+        transition: .4s transform ease-out .3s, .9s opacity ease-out .3s;
+
+        .skills {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+        }
+
+        .skill {
+            margin-top: 15px;
+            margin-left: 10px;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        .skill-name {
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .skill-item {
+            text-align: left;
+            font-size: 11px;
+
+            &:after {
+                content: '|';
+                padding: 0 5px;
+            }
+
+            &:last-of-type {
+                &:after { display: none; }
+            }
+        }
+    }
+
+    .bio {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        left: 10px;
+        color: #FFF;
+        opacity: .7;
+        transform: translateY(120%);
+        transition: .4s transform ease-out, .3s opacity ease-out;
+        opacity: 0;
+
+        .title {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .copy {
+            font-size: 14px;
+            width: 95%;
+            text-align: justify;
+            margin-top: 10px;
+            line-height: 1.25;
+        }
+    }
+
+    &.showbio {
+        .info {
+            transform: translateY(100%);
+            transition: .4s transform ease-out, .5s opacity ease-out .3s;
+            opacity: 0;
+        }
+
+        .bio {
+            transform: translateY(0%);
+            opacity: .7;
+            transition: .4s transform ease-out .3s, .5s opacity ease-out .3s;
+        }
+    }
+
+    &.main {
+        height: 500px;
+        width: 450px;
+    }
+
+    &.sub {
+        height: 250px;
+        width: 100%;
+        margin-top: 20px;
+        background-color: #000;
+
+        .profile-image {
+            width: 250px;
+        }
+
+        .name {
+            margin-left: 260px;
+        }
+
+        .info {
+            left: 250px;
+
+            .skill-name {
+                font-size: 14px;
+            }
+        }
+
+        .bio {
+            left: 260px;
+
+            .title {
+                font-size: 14px;
+            }
+
+            .copy {
+                width: calc(98% - 250px);
+                font-size: 11px;
+            }
+        }
+    }
+}
