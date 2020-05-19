@@ -1,18 +1,26 @@
 .footer {
-    --footer-height: 50px;
+    --footer-height: 250px;
 
     background-color: #000;
-    height: var(--footer-height);
+    min-height: var(--footer-height);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 2rem 4rem;
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
     .ig, .fb, .linkedin {
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
         background-repeat: no-repeat;
         background-size: contain;
-        margin: 0 10px;
+        margin: 1rem 0;
     }
 
     .linkedin { background-image: url('./../../assets/linkedin-white.png'); }

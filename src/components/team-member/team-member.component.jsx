@@ -10,7 +10,7 @@ class TeamMember extends React.Component {
         }
     }
 
-    toggleBio = (event) => {
+    toggleBio = event => {
         this.setState((state) => {
             return { showBio: !state.showBio }
         })

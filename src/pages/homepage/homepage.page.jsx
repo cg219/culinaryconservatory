@@ -8,12 +8,14 @@ export const Homepage = () => (
     <div>
         <div className="enter">
             <div className="procurement">
+                <div className="background-image" />
                 <Link to="procurement" />
-                <span>Procurement</span>
+                <span>Procurement &amp; Placements</span>
             </div>
             <div className="culicon">
+                <div className="background-image" />
                 <Link to="culicon" />
-                <span>Culicon</span>
+                <span>Culicon Consultants</span>
             </div>
         </div>
     </div>

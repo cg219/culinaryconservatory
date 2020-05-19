@@ -1,6 +1,7 @@
 @keyframes pulse {
     to {
-        transform: scale(1.02);
+        transform: translateY(-2%);
+        box-shadow: 2px 6px 6px rgba(0, 0, 0, .6);
     }
 }
 
@@ -8,9 +9,7 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 10px;
     transition: .2s transform ease-out;
-    transform: scale(1);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
 
     &:hover {
@@ -35,8 +34,8 @@
 
         &:after {
             content: '';
-            background-color: #000;
-            opacity: .7;
+            background-color: #e6b9b8;
+            opacity: .4;
             width: 100%;
             height: 100%;
             position: absolute;
@@ -53,8 +52,7 @@
         margin-left: 10px;
         position: absolute;
         z-index: 10;
-        color: #FFF;
-        opacity: .7;
+        color: #000;
     }
 
     .info {
@@ -63,8 +61,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        color: #FFF;
-        opacity: .7;
+        color: #000;
         transform: translateY(0%);
         transition: .4s transform ease-out .3s, .9s opacity ease-out .3s;
 
@@ -115,8 +112,7 @@
         width: 100%;
         bottom: 10px;
         left: 10px;
-        color: #FFF;
-        opacity: .7;
+        color: #000;
         transform: translateY(120%);
         transition: .4s transform ease-out, .3s opacity ease-out;
         opacity: 0;
@@ -144,7 +140,7 @@
 
         .bio {
             transform: translateY(0%);
-            opacity: .7;
+            opacity: 1;
             transition: .4s transform ease-out .3s, .5s opacity ease-out .3s;
         }
     }
@@ -166,10 +162,12 @@
 
         .name {
             margin-left: 260px;
+            color: #FFF;
         }
 
         .info {
             left: 250px;
+            color: #FFF;
 
             .skill-name {
                 font-size: 14px;
@@ -178,6 +176,7 @@
 
         .bio {
             left: 260px;
+            color: #FFF;
 
             .title {
                 font-size: 14px;

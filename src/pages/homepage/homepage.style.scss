@@ -24,6 +24,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
+        z-index: 4;
     }
 
     span {
@@ -34,5 +35,24 @@
         font-weight: bold;
         letter-spacing: 1px;
         font-size: 20px;
+        z-index: 2;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        opacity: .5;
+    }
+
+    .procurement {
+        .background-image { background-image: url('./../../assets/home1.jpg') }
+    }
+
+    .culicon {
+        .background-image { background-image: url('./../../assets/home2.jpg') }
     }
 }
