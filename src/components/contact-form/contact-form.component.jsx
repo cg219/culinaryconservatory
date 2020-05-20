@@ -18,6 +18,7 @@ class ContactForm extends React.Component {
     render() {
         return (
             <div className="contact-form">
+                <h3 className="contact-form-title">Contact Us</h3>
                 <form onSubmit={ this.sendForm }>
                     <div className="input-wrapper">
                         <input type="text" placeholder="Name" />
