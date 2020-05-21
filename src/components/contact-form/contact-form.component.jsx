@@ -1,6 +1,13 @@
 import React from "react";
 import "./contact-form.style.scss";
 
+// Name entry.2127806314
+// Email entry.399317233
+// Body entry.10262297
+// City entry.1669405955
+// State entry.1155721484
+// Phone entry.2108076832
+
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
@@ -23,11 +30,21 @@ class ContactForm extends React.Component {
                     <div className="input-wrapper">
                         <input type="text" placeholder="Name" />
                     </div>
-                    <div className="input-wrapper">
-                        <input type="text" placeholder="Email" />
+                    <div className="input-group">
+                        <div className="input-wrapper">
+                            <input type="text" placeholder="Email" />
+                        </div>
+                        <div className="input-wrapper">
+                            <input type="text" placeholder="Phone" />
+                        </div>
                     </div>
-                    <div className="input-wrapper">
-                        <input type="text" placeholder="State" />
+                    <div className="input-group">
+                        <div className="input-wrapper">
+                            <input type="text" placeholder="City" />
+                        </div>
+                        <div className="input-wrapper">
+                            <input type="text" placeholder="State" />
+                        </div>
                     </div>
                     <div className="input-wrapper">
                         <textarea placeholder="Message"></textarea>

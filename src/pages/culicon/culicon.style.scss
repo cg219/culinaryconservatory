@@ -43,7 +43,7 @@
     &:after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 5px;
         left: 50%;
         transform: translate(-50%);
         background-image: url('./../../assets/waiter.png');

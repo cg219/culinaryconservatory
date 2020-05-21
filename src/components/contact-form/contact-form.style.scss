@@ -43,6 +43,15 @@
     }
 }
 
+.input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    .input-wrapper { width: 49%; }
+}
+
 .input-submit {
     background-color: #F0F0F0;
     border: 1px solid transparent;

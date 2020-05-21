@@ -15,7 +15,12 @@
         &:hover {
             background-color: #262324;
 
-            span { color: #e6b9b8; }
+            span {
+                color: #e6b9b8;
+                text-shadow: 1px 1px 10px rgba(0, 0, 0, .8);
+            }
+
+            .background-image{ filter: grayscale(0); }
         }
     }
 
@@ -28,7 +33,7 @@
     }
 
     span {
-        transition: .3s color ease-out;
+        transition: .3s color ease-out, .3s text-shadow ease-out;
         color: #262324;
         text-transform: uppercase;
         font-family: 'Roboto Slab';
@@ -36,6 +41,7 @@
         letter-spacing: 1px;
         font-size: 20px;
         z-index: 2;
+        text-shadow: 1px 1px 10px rgba(255, 255, 255, .7);
     }
 
     .background-image {
@@ -45,14 +51,16 @@
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 1;
-        opacity: .5;
-    }
-
-    .procurement {
-        .background-image { background-image: url('./../../assets/home1.jpg') }
+        opacity: .8;
+        filter: grayscale(100%);
+        transition: .3s filter ease-out;
     }
 
     .culicon {
+        .background-image { background-image: url('./../../assets/home1.jpg') }
+    }
+
+    .procurement {
         .background-image { background-image: url('./../../assets/home2.jpg') }
     }
 }
