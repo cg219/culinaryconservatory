@@ -23,6 +23,14 @@ export const CC = () => (
                 <Homepage />
             </Route>
         </Switch>
-        <Footer />
+
+        <Switch>
+            <Route exact path="/">
+                <Footer />
+            </Route>
+            <Route path="/:anything">
+                <Footer hasForm />
+            </Route>
+        </Switch>
     </div>
 );

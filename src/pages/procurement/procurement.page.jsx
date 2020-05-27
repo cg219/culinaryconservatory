@@ -24,7 +24,7 @@ class ProcurementPage extends React.Component {
     render() {
         return (
             <div>
-                <section className="feature"></section>
+                <section className="feature procurement-feature"></section>
                 <section id="procurement" className={`${this.state.loaded ? 'present': ''}`}>
                     <h1>Procurement &amp; Placements</h1>
                     <h2>Collective</h2>

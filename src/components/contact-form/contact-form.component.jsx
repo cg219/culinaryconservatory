@@ -63,21 +63,11 @@ class ContactForm extends React.Component {
                     <div className="input-wrapper">
                         <input type="text" name="entry.2127806314" placeholder="Name" />
                     </div>
-                    <div className="input-group">
-                        <div className="input-wrapper">
-                            <input type="text" name="entry.399317233" placeholder="Email" />
-                        </div>
-                        <div className="input-wrapper">
-                            <input type="text" name="entry.2108076832" placeholder="Phone" />
-                        </div>
+                    <div className="input-wrapper">
+                        <input type="text" name="entry.399317233" placeholder="Email" />
                     </div>
-                    <div className="input-group">
-                        <div className="input-wrapper">
-                            <input type="text" name="entry.1669405955" placeholder="City" />
-                        </div>
-                        <div className="input-wrapper">
-                            <input type="text" name="entry.1155721484" placeholder="State" />
-                        </div>
+                    <div className="input-wrapper">
+                        <input type="text" name="entry.2108076832" placeholder="Phone" />
                     </div>
                     <div className="input-wrapper">
                         <textarea name="entry.10262297" placeholder="Message"></textarea>
