@@ -44,8 +44,9 @@ h2 {
         top: 50%;
         background-size: 100% 5px;
         background-repeat: no-repeat;
-        transition: .9s width ease-out;
+        transition: .8s width ease-out, .3s opacity ease-out .1s;
         width: 0;
+        opacity: 0;
     }
 
     &:before {

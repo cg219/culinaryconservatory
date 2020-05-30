@@ -57,7 +57,10 @@
     }
 
     .culicon {
-        .background-image { background-image: url('./../../assets/home1.jpg') }
+        .background-image {
+            background-image: url('./../../assets/home1.jpg');
+            background-position: bottom right;
+        }
     }
 
     .procurement {

@@ -14,7 +14,7 @@ export const Footer = (props) => {
     }
 
     return (
-        <div className="footer">
+        <div className={`footer ${props.hasForm ? 'with-form' : 'no-form'}`}>
             <div className="socials">
                 <div className="linkedin">
                     <a href="https://www.linkedin.com/in/robin-lewis-0134014" target="_blank"></a>

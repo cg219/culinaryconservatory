@@ -25,11 +25,11 @@ class TeamMember extends React.Component {
                     <div className="skills">
                         {
                             this.props.skills.map(skill => (
-                                <div className="skill">
+                                <div className="skill" key={skill.name}>
                                     <div className="skill-name">{skill.name}:</div>
                                     <div className="skill-list">
                                     {
-                                        skill.list.map(item => <div className="skill-item">{item}</div>)
+                                        skill.list.map((item, index) => <div className="skill-item" key={index}>{item}</div>)
                                     }
                                     </div>
                                 </div>

@@ -14,7 +14,7 @@ class ContactForm extends React.Component {
         super(props);
 
         this.state = {
-
+            form: {}
         }
     }
 
@@ -25,8 +25,6 @@ class ContactForm extends React.Component {
             'entry.2127806314': 'Name',
             'entry.399317233': 'Email',
             'entry.10262297': 'Body',
-            'entry.1669405955': 'City',
-            'entry.1155721484': 'State',
             'entry.2108076832': 'Phone'
         };
 
@@ -35,8 +33,6 @@ class ContactForm extends React.Component {
         fm.append('entry.2127806314', 'Name');
         fm.append('entry.399317233', 'Email');
         fm.append('entry.10262297', 'Body');
-        fm.append('entry.1669405955', 'City');
-        fm.append('entry.1155721484', 'State');
         fm.append('entry.2108076832', 'Phone');
 
         let options = {

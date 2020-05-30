@@ -105,7 +105,7 @@ class Team extends React.Component {
         return (
             <div className="team">
             {
-                this.state.members.map(({ id, name, bio, skills, type }) => <TeamMember key={id} bio={bio} name={name} skills={skills} type={type} />)
+                this.state.members.map(({ id, name, bio, skills, type }, index) => <TeamMember key={index} bio={bio} name={name} skills={skills} type={type} />)
             }
             </div>
         )

@@ -14,12 +14,15 @@ class ProcurementPage extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({loaded: true});
+        setTimeout(() => {
+            this.setState({loaded: true});
+        }, 500)
     }
 
     componentWillUnmount() {
         this.setState({loaded: false});
     }
+
 
     render() {
         return (

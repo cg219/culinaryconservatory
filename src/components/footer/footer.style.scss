@@ -33,6 +33,22 @@
         display: block;
     }
 
+    &.no-form {
+        --footer-height: 50px;
+        justify-content: center;
+        padding: 0;
+
+        .socials {
+            flex-direction: row;
+        }
+
+        .ig, .fb, .linkedin {
+            height: 1.3rem;
+            width: 1.3rem;
+            margin: .3rem 1rem;
+        }
+    }
+
     @media all and (max-width: 600px) {
         --footer-height: 15vw;
 
