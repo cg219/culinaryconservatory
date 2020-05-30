@@ -14,17 +14,20 @@ class ProcurementPage extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({loaded: true});
+        setTimeout(() => {
+            this.setState({loaded: true});
+        }, 500)
     }
 
     componentWillUnmount() {
         this.setState({loaded: false});
     }
 
+
     render() {
         return (
             <div>
-                <section className="feature"></section>
+                <section className="feature procurement-feature"></section>
                 <section id="procurement" className={`${this.state.loaded ? 'present': ''}`}>
                     <h1>Procurement &amp; Placements</h1>
                     <h2>Collective</h2>

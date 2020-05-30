@@ -8,10 +8,10 @@ class Nav extends React.Component {
 
         this.state = {
             links: [{
-                name: "Procurement",
+                name: "Procurement & Placements",
                 url: "procurement"
             }, {
-                name: "Culicon",
+                name: "Culicon Consultants",
                 url: "culicon"
             }]
         }
@@ -22,7 +22,7 @@ class Nav extends React.Component {
             <nav>
                 <ul>
                 {
-                    this.state.links.map(({ name, url}, index) => <li><Link to={url}>{name}</Link></li>)
+                    this.state.links.map(({ name, url}, index) => <li key={name}><Link to={url}>{name}</Link></li>)
                 }
                 </ul>
             </nav>

@@ -14,7 +14,9 @@ class CuliconPage extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({loaded: true});
+        setTimeout(() => {
+            this.setState({loaded: true});
+        }, 500)
     }
 
     componentWillUnmount() {
@@ -24,7 +26,7 @@ class CuliconPage extends React.Component {
     render() {
         return (
             <div>
-                <section className="feature"></section>
+                <section className="feature culicon-feature"></section>
                 <section id="culicon" className={`${this.state.loaded ? 'present': ''}`}>
                     <h1>CuliCon Consultants</h1>
                     <h2>Collective</h2>
