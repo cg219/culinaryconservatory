@@ -1,4 +1,4 @@
-.contact-form {
+.ContactForm {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     }
 }
 
-.input-wrapper {
+.InputWrapper {
     padding: .6rem .3rem;
     margin: .3rem 0;
     background-color: #F0F0F0;
@@ -43,16 +43,16 @@
     }
 }
 
-.input-group {
+.InputWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
 
-    .input-wrapper { width: 49%; }
+    .InputWrapper { width: 49%; }
 }
 
-.input-submit {
+.InputSubmit {
     background-color: #F0F0F0;
     border: 1px solid transparent;
     outline: none;

@@ -1,7 +1,8 @@
 import React from "react";
 import { Header } from "./../../components/header/header.component";
 import { Footer } from "./../../components/footer/footer.component";
-import "./procurement.style.scss";
+import page from "./../page.style.scss";
+import styles from "./procurement.style.scss";
 
 
 class ProcurementPage extends React.Component {
@@ -27,8 +28,8 @@ class ProcurementPage extends React.Component {
     render() {
         return (
             <div>
-                <section className="feature procurement-feature"></section>
-                <section id="procurement" className={`${this.state.loaded ? 'present': ''}`}>
+                <section className={`${page.Feature} ${page.ProcurementFeature}`}></section>
+                <section id={styles.Procurement} className={`${this.state.loaded ? styles.Present: ''}`}>
                     <h1>Procurement &amp; Placements</h1>
                     <h2>Collective</h2>
                     <p>Culinary Professionals turned Head Hunters, a group of tenured operators whose passions extend across the broad spectrum that is Hospitality.</p>

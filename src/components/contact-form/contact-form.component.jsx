@@ -1,5 +1,5 @@
 import React from "react";
-import "./contact-form.style.scss";
+import styles from "./contact-form.style.scss";
 
 // Name entry.2127806314
 // Email entry.399317233
@@ -53,22 +53,22 @@ class ContactForm extends React.Component {
 
     render() {
         return (
-            <div className="contact-form">
+            <div className={styles.ContactForm}>
                 <h3 className="contact-form-title">Contact Us</h3>
                 <form onSubmit={ this.sendForm }>
-                    <div className="input-wrapper">
+                    <div className={styles.InputWrapper}>
                         <input type="text" name="entry.2127806314" placeholder="Name" />
                     </div>
-                    <div className="input-wrapper">
+                    <div className={styles.InputWrapper}>
                         <input type="text" name="entry.399317233" placeholder="Email" />
                     </div>
-                    <div className="input-wrapper">
+                    <div className={styles.InputWrapper}>
                         <input type="text" name="entry.2108076832" placeholder="Phone" />
                     </div>
-                    <div className="input-wrapper">
+                    <div className={styles.InputWrapper}>
                         <textarea name="entry.10262297" placeholder="Message"></textarea>
                     </div>
-                    <input className="input-submit" value="Submit" type="submit" />
+                    <input className={styles.InputSubmit} value="Submit" type="submit" />
                 </form>
             </div>
         )

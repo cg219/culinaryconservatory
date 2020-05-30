@@ -1,4 +1,4 @@
-.header {
+.Header {
     --header-height: 100px;
 
     height: var(--header-height);
@@ -12,7 +12,7 @@
         align-items: center;
     }
 
-    .logo {
+    .Logo {
         width: 300px;
         display: flex;
         flex-direction: column;
