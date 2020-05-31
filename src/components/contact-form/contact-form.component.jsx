@@ -115,7 +115,7 @@ class ContactForm extends React.Component {
 
         return (
             <div className={styles.ContactForm}>
-                <h3 className="contact-form-title">Contact Us</h3>
+                <h3 className={styles.ContactFormTitle}>Contact Us</h3>
                 <form onSubmit={ this.sendForm }>
                     { inputs }
                     <input className={styles.InputSubmit} value="Submit" type="submit" />
