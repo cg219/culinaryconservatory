@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Header } from "./../../components/header/header.component";
 import { Footer } from "./../../components/footer/footer.component";
-import "./homepage.style.scss";
+import styles from "./homepage.style.scss";
 
 export const Homepage = () => (
     <div>
-        <div className="enter">
-            <div className="culicon">
-                <div className="background-image" />
+        <div className={styles.Enter}>
+            <div className={styles.Culicon}>
+                <div className={styles.Image} />
                 <Link to="culicon" />
                 <span>Culicon Consultants</span>
             </div>
-            <div className="procurement">
-                <div className="background-image" />
+            <div className={styles.Procurement}>
+                <div className={styles.Image} />
                 <Link to="procurement" />
                 <span>Procurement &amp; Placements</span>
             </div>

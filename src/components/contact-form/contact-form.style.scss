@@ -1,4 +1,4 @@
-.contact-form {
+.ContactForm {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -17,42 +17,16 @@
     }
 }
 
-.input-wrapper {
-    padding: .6rem .3rem;
-    margin: .3rem 0;
-    background-color: #F0F0F0;
-    box-sizing: border-box;
-    width: 100%;
-
-    input {
-        width: calc(100% - .6rem);
-        outline: none;
-        border: none;
-        color: #262324;
-        background-color: transparent;
-    }
-
-    textarea {
-        width: calc(100% - .6rem);
-        height: 7rem;
-        outline: none;
-        border: none;
-        resize: none;
-        color: #262324;
-        background-color: transparent;
-    }
-}
-
-.input-group {
+.InputGroup {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
 
-    .input-wrapper { width: 49%; }
+    .InputWrapper { width: 49%; }
 }
 
-.input-submit {
+.InputSubmit {
     background-color: #F0F0F0;
     border: 1px solid transparent;
     outline: none;
@@ -68,5 +42,27 @@
         background-color: #262324;
         color: #e6b9b8;
         border-color: rgba(red(#e6b9b8), green(#e6b9b8), blue(#e6b9b8), .4);
+    }
+}
+
+.ThankYou {
+    color: #e6b9b8;
+    font-size: 1.2rem;
+    transform: translateY(-130%);
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s opacity ease-out, .2s transform ease-out;
+
+    &.Show {
+        opacity: 1;
+        transform: translateY(-110%);
+    }
+
+    @media all and (max-width: 1024px) {
+        font-size: 1rem;
+    }
+
+    @media all and (max-width: 600px) {
+        font-size: .8rem;
     }
 }

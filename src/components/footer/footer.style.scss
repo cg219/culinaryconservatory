@@ -1,4 +1,4 @@
-.footer {
+.Footer {
     --footer-height: 250px;
 
     background-color: #000;
@@ -8,14 +8,14 @@
     align-items: center;
     padding: 2rem 4rem;
 
-    .socials {
+    .Socials {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-    .ig, .fb, .linkedin {
+    .IG, .FB, .LinkedIn {
         width: 2rem;
         height: 2rem;
         background-repeat: no-repeat;
@@ -23,9 +23,9 @@
         margin: 1rem 0;
     }
 
-    .linkedin { background-image: url('./../../assets/linkedin-white.png'); }
-    .fb { background-image: url('./../../assets/fb-white.png'); }
-    .ig { background-image: url('./../../assets/ig-white.png'); }
+    .LinkedIn { background-image: url('./../../assets/linkedin-white.png'); }
+    .FB { background-image: url('./../../assets/fb-white.png'); }
+    .IG { background-image: url('./../../assets/ig-white.png'); }
 
     a {
         width: 100%;
@@ -33,16 +33,16 @@
         display: block;
     }
 
-    &.no-form {
+    &.NoForm {
         --footer-height: 50px;
         justify-content: center;
         padding: 0;
 
-        .socials {
+        .Socials {
             flex-direction: row;
         }
 
-        .ig, .fb, .linkedin {
+        .IG, .FB, .LinkedIn {
             height: 1.3rem;
             width: 1.3rem;
             margin: .3rem 1rem;
@@ -52,7 +52,7 @@
     @media all and (max-width: 600px) {
         --footer-height: 15vw;
 
-        .ig, .fb, .linkedin {
+        .IG, .FB, .LinkedIn {
             width: 6vw;
             height: 6vw;
             margin: 0 3vw;

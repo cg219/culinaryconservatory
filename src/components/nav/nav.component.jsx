@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./nav.style.scss";
+import styles from "./nav.style.scss";
 
 class Nav extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class Nav extends React.Component {
 
     render() {
         return (
-            <nav>
+            <nav className={styles.Nav}>
                 <ul>
                 {
                     this.state.links.map(({ name, url}, index) => <li key={name}><Link to={url}>{name}</Link></li>)

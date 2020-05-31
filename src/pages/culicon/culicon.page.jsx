@@ -2,7 +2,8 @@ import React from "react";
 import { Header } from "./../../components/header/header.component";
 import { Footer } from "./../../components/footer/footer.component";
 import { Team } from "./../../components/team/team.component";
-import "./culicon.style.scss";
+import page from "./../page.style.scss";
+import styles from "./culicon.style.scss";
 
 class CuliconPage extends React.Component {
     constructor(props) {
@@ -26,8 +27,8 @@ class CuliconPage extends React.Component {
     render() {
         return (
             <div>
-                <section className="feature culicon-feature"></section>
-                <section id="culicon" className={`${this.state.loaded ? 'present': ''}`}>
+                <section className={`${page.Feature} ${page.CuliconFeature}`}></section>
+                <section id={styles.Culicon} className={`${this.state.loaded ? styles.Present: ''}`}>
                     <h1>CuliCon Consultants</h1>
                     <h2>Collective</h2>
                     <p>CuliCon, a team of hospitality professionals, proven operators, all accomplished in our varied areas of expertise.</p>

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./header.style.scss";
+import styles from "./header.style.scss";
 
 export const Header = (props) => (
-    <div className="header">
-        <div className="logo">
+    <div className={styles.Header}>
+        <div className={styles.Logo}>
             <Link to="/" />
         </div>
     </div>
