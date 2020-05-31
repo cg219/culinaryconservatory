@@ -44,3 +44,25 @@
         border-color: rgba(red(#e6b9b8), green(#e6b9b8), blue(#e6b9b8), .4);
     }
 }
+
+.ThankYou {
+    color: #e6b9b8;
+    font-size: 1.2rem;
+    transform: translateY(-130%);
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s opacity ease-out, .2s transform ease-out;
+
+    &.Show {
+        opacity: 1;
+        transform: translateY(-110%);
+    }
+
+    @media all and (max-width: 1024px) {
+        font-size: 1rem;
+    }
+
+    @media all and (max-width: 600px) {
+        font-size: .8rem;
+    }
+}

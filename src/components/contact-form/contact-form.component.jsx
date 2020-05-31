@@ -7,6 +7,7 @@ class ContactForm extends React.Component {
         super(props);
 
         this.state = {
+            showThankyou: false,
             inputs: [{
                 id: 'entry.2127806314',
                 config: {
@@ -62,6 +63,7 @@ class ContactForm extends React.Component {
             if (element.id === id) element.config.value = newValue;
             return element;
         });
+        newState.showThankyou = false;
 
         this.setState(newState);
     }
@@ -73,6 +75,8 @@ class ContactForm extends React.Component {
             element.config.value = "";
             return element;
         });
+
+        newState.showThankyou = true;
 
         this.setState(newState);
     }
@@ -116,6 +120,7 @@ class ContactForm extends React.Component {
                     { inputs }
                     <input className={styles.InputSubmit} value="Submit" type="submit" />
                 </form>
+                <div className={`${styles.ThankYou} ${this.state.showThankyou ? styles.Show : ''}`}><span>Thank You for your Inquiry</span></div>
             </div>
         )
     }
