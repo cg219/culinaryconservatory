@@ -17,33 +17,7 @@
     }
 }
 
-.InputWrapper {
-    padding: .6rem .3rem;
-    margin: .3rem 0;
-    background-color: #F0F0F0;
-    box-sizing: border-box;
-    width: 100%;
-
-    input {
-        width: calc(100% - .6rem);
-        outline: none;
-        border: none;
-        color: #262324;
-        background-color: transparent;
-    }
-
-    textarea {
-        width: calc(100% - .6rem);
-        height: 7rem;
-        outline: none;
-        border: none;
-        resize: none;
-        color: #262324;
-        background-color: transparent;
-    }
-}
-
-.InputWrapper {
+.InputGroup {
     display: flex;
     flex-direction: row;
     width: 100%;

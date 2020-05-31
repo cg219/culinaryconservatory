@@ -1,39 +1,88 @@
 import React from "react";
 import styles from "./contact-form.style.scss";
-
-// Name entry.2127806314
-// Email entry.399317233
-// Body entry.10262297
-// City entry.1669405955
-// State entry.1155721484
-// Phone entry.2108076832
-// https://docs.google.com/forms/d/e/1FAIpQLScYJSQomGuAgxgcmCU1kWyNv0Z1pD1JfFFjp8dd5jfqCXIk3A/formResponse
+import { Input } from "./../input/input.component";
 
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            form: {}
+            inputs: [{
+                id: 'entry.2127806314',
+                config: {
+                    placeholder: 'Name',
+                    type: 'text',
+                    value: ''
+                },
+                validation: {
+                    required: true
+                },
+                field: 'input'
+            }, {
+                id: 'entry.399317233',
+                config: {
+                    placeholder: 'Email',
+                    type: 'email',
+                    value: ''
+                },
+                validation: {
+                    required: true
+                },
+                field: 'input'
+            }, {
+                id: 'entry.2108076832',
+                config: {
+                    placeholder: 'Phone',
+                    type: 'text',
+                    value: ''
+                },
+                validation: {
+                    required: true
+                },
+                field: 'input'
+            }, {
+                id: 'entry.10262297',
+                config: {
+                    placeholder: 'Message',
+                    value: ''
+                },
+                validation: {
+                    required: true
+                },
+                field: 'textarea'
+            }]
         }
+    }
+
+    updateInput = (event, id) => {
+        let newValue = event.target.value;
+        let newState = { ...this.state };
+
+        newState.inputs = this.state.inputs.filter(element => {
+            if (element.id === id) element.config.value = newValue;
+            return element;
+        });
+
+        this.setState(newState);
+    }
+
+    clearInputs = () => {
+        let newState = { ...this.state };
+
+        newState.inputs = this.state.inputs.map(element => {
+            element.config.value = "";
+            return element;
+        });
+
+        this.setState(newState);
     }
 
     sendForm = event => {
         event.preventDefault();
 
-        let data = {
-            'entry.2127806314': 'Name',
-            'entry.399317233': 'Email',
-            'entry.10262297': 'Body',
-            'entry.2108076832': 'Phone'
-        };
-
         let fm = new FormData();
 
-        fm.append('entry.2127806314', 'Name');
-        fm.append('entry.399317233', 'Email');
-        fm.append('entry.10262297', 'Body');
-        fm.append('entry.2108076832', 'Phone');
+        this.state.inputs.map(input => fm.append(input.id, input.config.value));
 
         let options = {
             method: 'POST',
@@ -46,28 +95,25 @@ class ContactForm extends React.Component {
         };
 
         fetch('https://docs.google.com/forms/d/e/1FAIpQLScYJSQomGuAgxgcmCU1kWyNv0Z1pD1JfFFjp8dd5jfqCXIk3A/formResponse', options)
-            .then(response => response.xml())
-            .then(data => console.log(`Success: ${data}`))
+            .then(response => this.clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
 
     render() {
+        let inputs = this.state.inputs.map(data => {
+            return <Input
+                key={data.id}
+                config={data.config}
+                changed={event => this.updateInput(event, data.id)}
+                field={data.field}
+                required={data.validation.required} />
+        });
+
         return (
             <div className={styles.ContactForm}>
                 <h3 className="contact-form-title">Contact Us</h3>
                 <form onSubmit={ this.sendForm }>
-                    <div className={styles.InputWrapper}>
-                        <input type="text" name="entry.2127806314" placeholder="Name" />
-                    </div>
-                    <div className={styles.InputWrapper}>
-                        <input type="text" name="entry.399317233" placeholder="Email" />
-                    </div>
-                    <div className={styles.InputWrapper}>
-                        <input type="text" name="entry.2108076832" placeholder="Phone" />
-                    </div>
-                    <div className={styles.InputWrapper}>
-                        <textarea name="entry.10262297" placeholder="Message"></textarea>
-                    </div>
+                    { inputs }
                     <input className={styles.InputSubmit} value="Submit" type="submit" />
                 </form>
             </div>
