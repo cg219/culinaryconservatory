@@ -52,10 +52,17 @@
     @media all and (max-width: 600px) {
         --footer-height: 15vw;
 
+        flex-direction: column;
+        padding: 10vw 4vw;
+
+        .Socials {
+            flex-direction: row;
+        }
+
         .IG, .FB, .LinkedIn {
             width: 6vw;
             height: 6vw;
-            margin: 0 3vw;
+            margin: 0 1.2vw 10vw;
         }
     }
 }

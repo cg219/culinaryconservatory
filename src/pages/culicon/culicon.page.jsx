@@ -9,7 +9,7 @@ class CuliconPage extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state ={
+        this.state = {
             loaded: false
         }
     }
@@ -53,6 +53,7 @@ class CuliconPage extends React.Component {
                     </ul>
 
                     <h2>Team</h2>
+                    <div className={styles.Subtitle}>Click member for more information</div>
                     <Team />
                 </section>
             </div>
