@@ -60,11 +60,11 @@ h2 {
     }
 
     @media all and (max-width: 600px) {
-        font-size: 4.5vw;
+        font-size: 3.5vw;
         margin: 8vw auto 2.5vw;
 
         &:before, &:after {
-            height: .6vw;
+            height: .4vw;
             background-size: 100% .8vw;
         }
     }
@@ -91,7 +91,7 @@ section {
 
         p {
             margin: 0 auto 5vw;
-            font-size: 3.5vw;
+            font-size: 3vw;
             line-height: 1.3;
         }
     }
