@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
     "preview": "parcel build src/index.html src/200.html --out-dir distpreview && surge distpreview --domain cc_imk.surge.sh",
-    "preview:build": "parcel build src/index.html src/200.html --out-dir distpreview",
+    "preview:build": "parcel build src/index.html --out-dir distpreview",
     "preview:push": "surge distpreview --domain cc_imk.surge.sh",
-    "build": "parcel build --no-source-maps src/.html --public-url http://www.culinaryconservatory.com/ --out-dir distpub"
+    "build": "parcel build --no-source-maps src/index.html --public-url http://www.culinaryconservatory.com/ --out-dir distpub"
   },
   "author": "Clemente Gomez",
   "license": "ISC",
@@ -29,7 +29,8 @@
     "parcel-plugin-nuke-dist": "1.0.1",
     "postcss-modules": "^2.0.0",
     "sass": "1.26.3",
-    "surge": "0.21.3"
+    "surge": "0.21.3",
+    "vercel": "^19.0.1"
   },
   "browserslist": [
     "last 2 versions",
