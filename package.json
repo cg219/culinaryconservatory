@@ -29,7 +29,8 @@
     "parcel-plugin-nuke-dist": "1.0.1",
     "postcss-modules": "^2.0.0",
     "sass": "1.26.3",
-    "surge": "0.21.3"
+    "surge": "0.21.3",
+    "vercel": "^19.0.1"
   },
   "browserslist": [
     "last 2 versions",
