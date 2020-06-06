@@ -4,3 +4,5 @@ private/
 dist/
 distpreview/
 distpub/
+
+.vercel
