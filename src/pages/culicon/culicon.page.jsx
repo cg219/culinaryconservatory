@@ -10,7 +10,29 @@ class CuliconPage extends React.Component {
         super(props);
 
         this.state = {
-            loaded: false
+            loaded: false,
+            data: {
+                collective: [
+                    "CuliCon, a team of hospitality professionals, proven operators, all accomplished in our varied areas of expertise.",
+                    "Reliable short-term consultants that provide viable long-term results."
+                ],
+                structure: [
+                    "CuliCon provides project advisory services and placement with trusted, pre-vetted hospitality consultants. Advisory services are two tiered starting with a CuliCon Consultant to determine and outline the scope of work, create the project order and pair the best consultants from our team or network. CuliCon remains involved as a dedicated point of contact through the consultancy as a perpetual resource, and to lend hands-on support as needed.",
+                    "Placement services are an extension of our sister Procurement &amp; Placement division. We recommend consultants from our team or network, and furnish legal agreements to solidify partnerships."
+                ],
+                proficiencies: [
+                    "Restaurant Operations",
+                    "Hospitality & Service Training",
+                    "Culinary Menu Development",
+                    "Restaurant Finances",
+                    "Beverage Programs",
+                    "Human Resources",
+                    "Kitchen Design",
+                    "Openings & Reorganization",
+                    "Health & Hygiene Protocol",
+                    "Corporate Food Science & Development"
+                ]
+            }
         }
     }
 
@@ -31,25 +53,14 @@ class CuliconPage extends React.Component {
                 <section id={styles.Culicon} className={`${this.state.loaded ? styles.Present: ''}`}>
                     <h1>CuliCon Consultants</h1>
                     <h2>Collective</h2>
-                    <p>CuliCon, a team of hospitality professionals, proven operators, all accomplished in our varied areas of expertise.</p>
-                    <p>Reliable short-term consultants that provide viable long-term results.</p>
+                    { this.state.data.collective.map(copy => <p>{copy}</p>)}
 
                     <h2>Structure</h2>
-                    <p>CuliCon provides project advisory services and placement with trusted hospitality consultants. </p>
-                    <p>We help determine and outline the scope of work, then recommend consultants either from our team or those we represent, and furnish legal agreements to solidify partnerships.</p>
-                    <p>CuliCon remains involved as a dedicated point of contact through the consultancy term serving as an additional layer of expertise, secondary reservoir of knowledge, and lend hands-on support as needed.</p>
+                    { this.state.data.structure.map(copy => <p>{copy}</p>)}
 
                     <h2>Proficiencies</h2>
                     <ul>
-                        <li>Restaurant Operations</li>
-                        <li>Hospitality &amp; Service Training</li>
-                        <li>Health &amp; Hygiene Protocol</li>
-                        <li>Human Resources</li>
-                        <li>Beverage Programs</li>
-                        <li>Kitchen Design</li>
-                        <li>Restaurant Finances</li>
-                        <li>Openings &amp; Reorganization</li>
-                        <li>Culinary Menu Development</li>
+                        { this.state.data.proficiencies.map(copy => <li>{copy}</li>)}
                     </ul>
 
                     <h2>Team</h2>
