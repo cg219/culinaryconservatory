@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/*.html",
     "preview": "parcel build src/*.html --out-dir distpreview && surge distpreview --domain cc_imk.surge.sh",
-    "build": "parcel build --no-source-maps src/*.html --public-url http://www.culinaryconservatory.com/ --out-dir distpub"
+    "build": "parcel build --no-source-maps src/*.html --public-url https://www.culinaryconservatory.com/ --out-dir distpub"
   },
   "author": "Clemente Gomez",
   "license": "ISC",
