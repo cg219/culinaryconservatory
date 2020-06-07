@@ -19,34 +19,34 @@
     box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
     background-color: #e6b9b8;
 
-    &:hover {
-        animation-name: pulse;
-        animation-duration: .5s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 4;
-        animation-direction: alternate;
-        animation-fill-mode: backwards;
-    }
+    // &:hover {
+    //     animation-name: pulse;
+    //     animation-duration: .5s;
+    //     animation-timing-function: ease-in-out;
+    //     animation-iteration-count: 4;
+    //     animation-direction: alternate;
+    //     animation-fill-mode: backwards;
+    // }
 
-    &:after {
-        content: '';
-        background-image: url('./../../assets/corner-arrow.png');
-        background-size: contain;
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        transform: rotate(90deg);
-        right: 5px;
-        top: 5px;
-        animation-name: pulse-arrow;
-        animation-duration: .5s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-fill-mode: backwards;
-    }
+    // &:after {
+    //     content: '';
+    //     background-image: url('./../../assets/corner-arrow.png');
+    //     background-size: contain;
+    //     position: absolute;
+    //     width: 20px;
+    //     height: 20px;
+    //     transform: rotate(90deg);
+    //     right: 5px;
+    //     top: 5px;
+    //     animation-name: pulse-arrow;
+    //     animation-duration: .5s;
+    //     animation-timing-function: ease-in-out;
+    //     animation-iteration-count: infinite;
+    //     animation-direction: alternate;
+    //     animation-fill-mode: backwards;
+    // }
 
-    @media all and (max-width: 600px) {
+    @media all and (max-width: 1024px) {
         margin-bottom: 5vw;
 
         &:hover { animation-name: none; }
@@ -73,9 +73,8 @@
 
         &:after {
             content: '';
-            // background-color: #e6b9b8;
             background-color: #FFF;
-            opacity: .0;
+            opacity: .2;
             width: 100%;
             height: 100%;
             position: absolute;
@@ -93,8 +92,9 @@
         position: absolute;
         z-index: 10;
         color: #000;
+        // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 1024px) {
             font-size: 6vw;
             margin-top: 4vw;
             margin-left: 3vw;
@@ -110,12 +110,12 @@
         color: #000;
         transform: translateY(0%);
         transition: .4s transform ease-out .3s, .9s opacity ease-out .3s;
-        // text-shadow: 1px 1px 15px rgba(255, 255, 255, .4);
 
         .Skills {
             position: absolute;
             bottom: 10px;
             left: 0;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
         }
 
         .Skill {
@@ -131,6 +131,7 @@
             text-align: left;
             font-weight: bold;
             font-size: 16px;
+            // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
         }
 
         .SkillList {
@@ -142,6 +143,9 @@
         .SkillItem{
             text-align: left;
             font-size: 11px;
+            // font-weight: bold;
+            letter-spacing: .2px;
+            // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
 
             &:after {
                 content: '|';
@@ -153,19 +157,27 @@
             }
         }
 
-        @media all and (max-width: 600px) {
-            .Skills { bottom: 3vw; }
+        @media all and (max-width: 1024px) {
+            .Skills {
+                bottom: 3vw;
+                text-shadow: .5vw .5vw 2vw rgba(0, 0, 0, .3);
+            }
 
             .Skill {
                 margin-top: 3vw;
                 margin-left: 3vw;
             }
 
-            .SkillName { font-size: 4vw; }
+            .SkillName {
+                font-size: 4vw;
+                // text-shadow: .2vw .2vw 1vw rgba(255, 255, 255, .4);
+            }
+
             .SkillList { flex-direction: column; }
 
             .SkillItem {
-                font-size: 3.5vw;
+                font-size: 3.3vw;
+                // text-shadow: .2vw .2vw 1vw rgba(255, 255, 255, .4);
 
                 &:after { display: none; }
             }
@@ -193,17 +205,23 @@
             text-align: justify;
             margin-top: 10px;
             line-height: 1.25;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
         }
 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 1024px) {
             bottom: 3vw;
             left: 3vw;
             width: 98%;
+
+            .Title {
+                font-size: 4vw;
+            }
 
             .Copy {
                 font-size: 3.7vw;
                 margin-top: 3vw;
                 line-height: 1;
+                text-shadow: .5vw .5vw 2vw rgba(0, 0, 0, .3);
             }
         }
     }
@@ -233,7 +251,7 @@
         height: 500px;
         width: 450px;
 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 1024px) {
             height: 130vw;
             width: 100%;
         }
@@ -247,7 +265,7 @@
 
         &:after { background-image: url('./../../assets/corner-arrow-white.png'); }
 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 1024px) {
             height: 190vw;
             margin-top: 3vw;
         }
@@ -261,7 +279,7 @@
                 opacity: .4;
             }
 
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 1024px) {
                 width: 100%;
                 height: 85vw;
             }
@@ -271,7 +289,7 @@
             margin-left: 260px;
             color: #FFF;
 
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 1024px) {
                 margin-left: 3vw;
                 margin-top: 90vw;
             }
@@ -285,8 +303,12 @@
                 font-size: 14px;
             }
 
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 1024px) {
                 left: 0;
+
+                .SkillName {
+                    font-size: 4vw;
+                }
             }
         }
 
@@ -303,9 +325,13 @@
                 font-size: 11px;
             }
 
-            @media all and (max-width: 600px) {
+            @media all and (max-width: 1024px) {
                 left: 3vw;
                 width: calc(100% - 6vw);
+
+                .Title {
+                    font-size: 4vw;
+                }
 
                 .Copy {
                     width: 100%;
