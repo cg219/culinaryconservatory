@@ -9,7 +9,7 @@ class ContactForm extends React.Component {
         this.state = {
             showThankyou: false,
             inputs: [{
-                id: 'entry.2127806314',
+                id: 'entry.1938789168',
                 config: {
                     placeholder: 'Name',
                     type: 'text',
@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.399317233',
+                id: 'entry.1199076498',
                 config: {
                     placeholder: 'Email',
                     type: 'email',
@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.2108076832',
+                id: 'entry.1345472159',
                 config: {
                     placeholder: 'Phone',
                     type: 'text',
@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.10262297',
+                id: 'entry.1546798988',
                 config: {
                     placeholder: 'Message',
                     value: ''
@@ -98,7 +98,7 @@ class ContactForm extends React.Component {
             }
         };
 
-        fetch('https://docs.google.com/forms/d/e/1FAIpQLScYJSQomGuAgxgcmCU1kWyNv0Z1pD1JfFFjp8dd5jfqCXIk3A/formResponse', options)
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSdjBK_HZBt4veZoH24SZHsZMcPHbhjOkoPtQVw-qAPHtaaiWw/formResponse', options)
             .then(response => this.clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
