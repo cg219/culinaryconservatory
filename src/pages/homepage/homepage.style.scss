@@ -79,6 +79,9 @@
     }
 
     .Procurement {
-        .Image { background-image: url('./../../assets/home2.jpg') }
+        .Image {
+            background-image: url('./../../assets/home2.jpg');
+            background-position: top left;
+        }
     }
 }

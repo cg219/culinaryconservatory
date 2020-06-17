@@ -13,12 +13,11 @@ class CuliconPage extends React.Component {
             loaded: false,
             data: {
                 collective: [
-                    "CuliCon, a team of hospitality professionals, proven operators, all accomplished in our varied areas of expertise.",
-                    "Reliable short-term consultants that provide viable long-term results."
+                    "CuliCon, a team of hospitality professionals, proven operators, all accomplished in our varied areas of expertise. Reliable short-term consultants that provide viable long-term results.",
                 ],
                 structure: [
                     "CuliCon provides project advisory services and placement with trusted, pre-vetted hospitality consultants. Advisory services are two tiered starting with a CuliCon Consultant to determine and outline the scope of work, create the project order and pair the best consultants from our team or network. CuliCon remains involved as a dedicated point of contact through the consultancy as a perpetual resource, and to lend hands-on support as needed.",
-                    "Placement services are an extension of our sister Procurement &amp; Placement division. We recommend consultants from our team or network, and furnish legal agreements to solidify partnerships."
+                    "Placement services are an extension of our sister Procurement & Placement division. We recommend consultants from our team or network, and furnish legal agreements to solidify partnerships."
                 ],
                 proficiencies: [
                     "Restaurant Operations",
@@ -64,7 +63,6 @@ class CuliconPage extends React.Component {
                     </ul>
 
                     <h2>Team</h2>
-                    <div className={styles.Subtitle}>Click member for more information</div>
                     <Team />
                 </section>
             </div>
