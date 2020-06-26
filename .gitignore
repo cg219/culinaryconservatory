@@ -6,3 +6,4 @@ distpreview/
 distpub/
 
 .vercel
+.firebase/
