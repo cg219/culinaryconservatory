@@ -42,17 +42,20 @@
         flex-wrap: wrap;
         max-width: 880px;
         justify-content: center;
+        align-items: center;
 
         li {
-            width: 25%;
+            // width: 25%;
             margin-bottom: 10px;
             font-size: .9rem;
+            flex: 1 0 25%;
         }
 
         @media all and (max-width: 600px) {
             li {
                 width: 100%;
                 margin-bottom: 1vw;
+                flex: 1 0 auto;
             }
         }
     }

@@ -24,7 +24,7 @@
     "autoprefixer": "9.7.6",
     "husky": "4.2.5",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-nuke-dist": "1.0.1",
+    "parcel-plugin-nuke-dist": "^1.0.1",
     "postcss-modules": "^2.0.0",
     "sass": "1.26.3",
     "vercel": "^19.0.1"
