@@ -22,6 +22,7 @@
             span {
                 color: #e6b9b8;
                 text-shadow: 1px 1px 10px rgba(0, 0, 0, .8);
+                background-color: rgba(255, 255, 255, 0);
             }
 
             .Image { filter: grayscale(0); }
@@ -42,7 +43,7 @@
     }
 
     span {
-        transition: .3s color ease-out, .3s text-shadow ease-out;
+        transition: .3s color ease-out, .3s text-shadow ease-out, .3s background-color ease-out;
         color: #262324;
         text-transform: uppercase;
         font-family: 'Roboto Slab';
@@ -50,12 +51,16 @@
         letter-spacing: 1px;
         font-size: 20px;
         z-index: 2;
-        text-shadow: 1px 1px 10px rgba(255, 255, 255, .7);
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0);
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, .5);
+        padding: 20px 0;
 
         @media all and (max-width: 600px) {
             font-size: 5vw;
             letter-spacing: .3vw;
-            text-shadow: 1vw 1vw 3vw rgba(255, 255, 255, .7);
+            text-shadow: 1vw 1vw 3vw rgba(255, 255, 255, .9);
         }
     }
 
@@ -76,12 +81,24 @@
             background-image: url('./../../assets/home1.jpg');
             background-position: center center;
         }
+
+        @media all and (max-width: 600px) {
+            order: 2;
+        }
     }
 
     .Procurement {
         .Image {
             background-image: url('./../../assets/home2-old.jpg');
-            background-position: center center;
+            background-position: left top;
+        }
+
+        @media all and (max-width: 600px) {
+            order: 1;
+
+            .Image {
+                background-position: center center;
+            }
         }
     }
 }

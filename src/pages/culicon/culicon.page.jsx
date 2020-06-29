@@ -52,14 +52,14 @@ class CuliconPage extends React.Component {
                 <section id={styles.Culicon} className={`${this.state.loaded ? styles.Present: ''}`}>
                     <h1>CuliCon Consultants</h1>
                     <h2>Collective</h2>
-                    { this.state.data.collective.map(copy => <p>{copy}</p>)}
+                    { this.state.data.collective.map((copy, index) => <p key={index}>{copy}</p>)}
 
                     <h2>Structure</h2>
-                    { this.state.data.structure.map(copy => <p>{copy}</p>)}
+                    { this.state.data.structure.map((copy, index) => <p key={index}>{copy}</p>)}
 
                     <h2>Proficiencies</h2>
                     <ul>
-                        { this.state.data.proficiencies.map(copy => <li>{copy}</li>)}
+                        { this.state.data.proficiencies.map((copy, index) => <li key={index}>{copy}</li>)}
                     </ul>
 
                     <h2>Team</h2>
