@@ -19,35 +19,8 @@
     box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
     background-color: #e6b9b8;
 
-    // &:hover {
-    //     animation-name: pulse;
-    //     animation-duration: .5s;
-    //     animation-timing-function: ease-in-out;
-    //     animation-iteration-count: 4;
-    //     animation-direction: alternate;
-    //     animation-fill-mode: backwards;
-    // }
-
-    // &:after {
-    //     content: '';
-    //     background-image: url('./../../assets/corner-arrow.png');
-    //     background-size: contain;
-    //     position: absolute;
-    //     width: 20px;
-    //     height: 20px;
-    //     transform: rotate(90deg);
-    //     right: 5px;
-    //     top: 5px;
-    //     animation-name: pulse-arrow;
-    //     animation-duration: .5s;
-    //     animation-timing-function: ease-in-out;
-    //     animation-iteration-count: infinite;
-    //     animation-direction: alternate;
-    //     animation-fill-mode: backwards;
-    // }
-
     @media all and (max-width: 1024px) {
-        margin-bottom: 5vw;
+        margin-bottom: 20vw;
 
         &:hover { animation-name: none; }
 
@@ -58,7 +31,6 @@
     }
 
     .ProfileImage {
-        // background-image: url('https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=700');
         background-image: url('./../../assets/sample.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -92,7 +64,6 @@
         position: absolute;
         z-index: 10;
         color: #000;
-        // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
 
         @media all and (max-width: 1024px) {
             font-size: 6vw;
@@ -131,7 +102,6 @@
             text-align: left;
             font-weight: bold;
             font-size: 16px;
-            // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
         }
 
         .SkillList {
@@ -143,9 +113,7 @@
         .SkillItem{
             text-align: left;
             font-size: 11px;
-            // font-weight: bold;
             letter-spacing: .2px;
-            // text-shadow: 1px 1px 5px rgba(255, 255, 255, .4);
 
             &:after {
                 content: '|';
@@ -170,14 +138,12 @@
 
             .SkillName {
                 font-size: 4vw;
-                // text-shadow: .2vw .2vw 1vw rgba(255, 255, 255, .4);
             }
 
             .SkillList { flex-direction: column; }
 
             .SkillItem {
                 font-size: 3.3vw;
-                // text-shadow: .2vw .2vw 1vw rgba(255, 255, 255, .4);
 
                 &:after { display: none; }
             }
@@ -266,8 +232,10 @@
         &:after { background-image: url('./../../assets/corner-arrow-white.png'); }
 
         @media all and (max-width: 1024px) {
-            height: 190vw;
+            height: 195vw;
             margin-top: 3vw;
+            border: .1vw solid rgba(255, 255, 255, .6);
+            box-sizing: border-box;
         }
 
         .ProfileImage {

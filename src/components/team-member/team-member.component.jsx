@@ -17,11 +17,19 @@ class TeamMember extends React.Component {
     }
 
     showBio = event => {
-        this.setState({ showBio: true})
+        let isMobile = window.innerWidth < 600;
+
+        if (!isMobile) {
+            this.setState({ showBio: true})
+        }
     }
 
     hideBio = event => {
-        this.setState({ showBio: false})
+        let isMobile = window.innerWidth < 600;
+
+        if (!isMobile) {
+            this.setState({ showBio: false})
+        }
     }
 
     render() {
