@@ -55,12 +55,13 @@
         width: 100%;
         text-align: center;
         background-color: rgba(255, 255, 255, .5);
-        padding: 20px 0;
+        padding: 10px 0;
 
         @media all and (max-width: 600px) {
-            font-size: 5vw;
+            font-size: 4vw;
             letter-spacing: .3vw;
             text-shadow: 1vw 1vw 3vw rgba(255, 255, 255, .9);
+            padding: 1.5vw 0;
         }
     }
 
