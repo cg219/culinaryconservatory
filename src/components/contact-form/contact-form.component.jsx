@@ -9,7 +9,7 @@ class ContactForm extends React.Component {
         this.state = {
             showThankyou: false,
             inputs: [{
-                id: 'entry.1938789168',
+                id: 'entry.1090562520',
                 config: {
                     placeholder: 'Name',
                     type: 'text',
@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.1199076498',
+                id: 'entry.552902496',
                 config: {
                     placeholder: 'Email',
                     type: 'email',
@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.1345472159',
+                id: 'entry.1509799615',
                 config: {
                     placeholder: 'Phone',
                     type: 'text',
@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.1546798988',
+                id: 'entry.1555435740',
                 config: {
                     placeholder: 'Message',
                     value: ''
