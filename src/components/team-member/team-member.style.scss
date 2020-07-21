@@ -30,6 +30,30 @@
         }
     }
 
+    &[data-id="1"] {
+        .ProfileImage { background-image: url('./../../assets/sample.jpg'); }
+    }
+
+    &[data-id="2"] {
+        .ProfileImage { background-image: url('./../../assets/profile2.jpg'); }
+    }
+
+    &[data-id="3"] {
+        .ProfileImage { background-image: url('./../../assets/profile3.jpg'); }
+    }
+
+    &[data-id="4"] {
+        .ProfileImage { background-image: url('./../../assets/profile4.jpg'); }
+    }
+
+    &[data-id="5"] {
+        .ProfileImage { background-image: url('./../../assets/profile5.jpg'); }
+    }
+
+    &[data-id="6"] {
+        .ProfileImage { background-image: url('./../../assets/profile6.jpg'); }
+    }
+
     .ProfileImage {
         background-image: url('./../../assets/sample.jpg');
         background-repeat: no-repeat;
@@ -92,6 +116,7 @@
         .Skill {
             margin-top: 15px;
             margin-left: 10px;
+            margin-right: 10px;
 
             &:first-of-type {
                 margin-top: 0;
@@ -108,12 +133,14 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            flex-wrap: wrap;
         }
 
         .SkillItem{
             text-align: left;
             font-size: 11px;
             letter-spacing: .2px;
+            line-height: 13px;
 
             &:after {
                 content: '|';
@@ -144,6 +171,7 @@
 
             .SkillItem {
                 font-size: 3.3vw;
+                line-height: 3.6vw;
 
                 &:after { display: none; }
             }
@@ -232,7 +260,7 @@
         &:after { background-image: url('./../../assets/corner-arrow-white.png'); }
 
         @media all and (max-width: 1024px) {
-            height: 195vw;
+            height: 210vw;
             margin-top: 3vw;
             border: .1vw solid rgba(255, 255, 255, .6);
             box-sizing: border-box;
@@ -266,6 +294,7 @@
         .Info {
             left: 250px;
             color: #FFF;
+            width: calc(100% - 250px);
 
             .SkillName {
                 font-size: 14px;
@@ -273,6 +302,7 @@
 
             @media all and (max-width: 1024px) {
                 left: 0;
+                width: 100%;
 
                 .SkillName {
                     font-size: 4vw;

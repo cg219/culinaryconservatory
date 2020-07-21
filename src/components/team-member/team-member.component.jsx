@@ -34,7 +34,7 @@ class TeamMember extends React.Component {
 
     render() {
         return (
-            <div className={`${styles.Card} ${styles[this.props.type]} ${this.state.showBio ? styles.ShowBio : ''}`} onClick={this.toggleBio} onMouseOver={this.showBio} onMouseOut={this.hideBio}>
+            <div data-id={this.props.dataId} className={`${styles.Card} ${styles[this.props.type]} ${this.state.showBio ? styles.ShowBio : ''}`} onClick={this.toggleBio} onMouseOver={this.showBio} onMouseOut={this.hideBio}>
                 <div className={styles.ProfileImage}></div>
                 <div className={styles.Name}>{this.props.name}</div>
                 <div className={styles.Info}>
