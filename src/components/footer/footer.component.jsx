@@ -4,8 +4,6 @@ import styles from "./footer.style.scss";
 
 let form = null;
 
-
-
 export const Footer = (props) => {
     let form = null;
 
