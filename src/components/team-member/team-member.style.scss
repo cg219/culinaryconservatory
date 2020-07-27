@@ -28,6 +28,10 @@
             width: 5vw;
             height: 5vw;
         }
+
+        &:last-of-type {
+            margin-bottom: 0
+        }
     }
 
     &[data-id="1"] {
@@ -40,18 +44,52 @@
 
     &[data-id="3"] {
         .ProfileImage { background-image: url('./../../assets/profile3.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 215vw;
+            }
+        }
     }
 
     &[data-id="4"] {
         .ProfileImage { background-image: url('./../../assets/profile4.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 185vw;
+            }
+        }
     }
 
     &[data-id="5"] {
         .ProfileImage { background-image: url('./../../assets/profile5.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 210vw;
+            }
+        }
     }
 
     &[data-id="6"] {
         .ProfileImage { background-image: url('./../../assets/profile6.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 185vw;
+            }
+        }
+    }
+
+    &[data-id="7"] {
+        .ProfileImage { background-image: url('./../../assets/profile7.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 205vw;
+            }
+        }
     }
 
     .ProfileImage {
@@ -159,19 +197,20 @@
             }
 
             .Skill {
-                margin-top: 3vw;
+                margin-top: 2.7vw;
                 margin-left: 3vw;
             }
 
             .SkillName {
-                font-size: 4vw;
+                font-size: 3.1vw;
+                margin-bottom: 1vw;
             }
 
             .SkillList { flex-direction: column; }
 
             .SkillItem {
-                font-size: 3.3vw;
-                line-height: 3.6vw;
+                font-size: 2.5vw;
+                line-height: 2.8vw;
 
                 &:after { display: none; }
             }
@@ -212,7 +251,7 @@
             }
 
             .Copy {
-                font-size: 3.7vw;
+                font-size: 3.3vw;
                 margin-top: 3vw;
                 line-height: 1;
                 text-shadow: .5vw .5vw 2vw rgba(0, 0, 0, .3);
@@ -222,10 +261,7 @@
 
     &.ShowBio {
         &.Main {
-            .ProfileImage {
-                opacity: .2;
-            }
-
+            .ProfileImage { opacity: .2; }
         }
 
         .Info {
@@ -252,7 +288,7 @@
     }
 
     &.Sub {
-        height: 250px;
+        height: 275px;
         width: 100%;
         margin-top: 20px;
         background-color: #000;
@@ -267,7 +303,7 @@
         }
 
         .ProfileImage {
-            width: 250px;
+            width: 275px;
             opacity: 1;
 
             &:after {
@@ -282,7 +318,7 @@
         }
 
         .Name {
-            margin-left: 260px;
+            margin-left: 290px;
             color: #FFF;
 
             @media all and (max-width: 1024px) {
@@ -292,9 +328,9 @@
         }
 
         .Info {
-            left: 250px;
+            left: 280px;
             color: #FFF;
-            width: calc(100% - 250px);
+            width: calc(100% - 275px);
 
             .SkillName {
                 font-size: 14px;
@@ -311,7 +347,7 @@
         }
 
         .Bio {
-            left: 260px;
+            left: 290px;
             color: #FFF;
 
             .Title {
@@ -319,7 +355,7 @@
             }
 
             .Copy {
-                width: calc(98% - 250px);
+                width: calc(98% - 285px);
                 font-size: 11px;
             }
 
