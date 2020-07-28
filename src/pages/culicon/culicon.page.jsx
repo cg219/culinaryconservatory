@@ -93,7 +93,7 @@ class CuliconPage extends React.Component {
                     }]
                 }, {
                     id: "4",
-                    name: "Nish Patel—CPA",
+                    name: "Nish Patel",
                     type: "Sub",
                     bio: `Nish earned his Master’s in accounting early on while working in London, he then joined Paperchase India and was quickly earmarked to lead their US expansion in 2010.  Now he is the Managing Partner of Paperchase North America and is the brainchild behind one of the first  successful Corporate Food Delivery operations in NYC.
                     <br /><br />Paperchase is a hospitality bookkeeping firm that represents QSR to Michelin operations worldwide, their niche expertise, producing analytical reporting, and outsourcing of day-to-day finance operations. Today they have over 500 restaurants in the US alone and continue to grow with offices in NYC, Miami & London. The spectrum of concepts they represent extend from groups like ZUMA, Dinex by Daniel Boulud, and The Fat Duck to Pincho and Five Guys.
