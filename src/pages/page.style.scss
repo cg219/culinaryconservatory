@@ -1,0 +1,26 @@
+.Feature {
+    color: #FFF;
+    background: #000;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, .3);
+    border-bottom: 1px solid rgba(red(#e6b9b8), green(#e6b9b8), blue(#e6b9b8), .5);
+
+    &.CuliconFeature {
+        background-image: url(../assets/feature-4.jpg);
+        background-position: center bottom 20%;
+    }
+
+    &.ProcurementFeature { background-image: url(../assets/feature-2.jpg); }
+
+    @media all and (max-width: 600px) {
+        padding: 10vw 5vw;
+        height: 50vw;
+    }
+}

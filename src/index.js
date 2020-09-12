@@ -1,12 +1,13 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
+import { CC } from "./CC";
 
-$('a[href^="#"]').on('click', event => {
-    event.preventDefault();
+ReactDOM.render(
+    <BrowserRouter>
+        <CC />
+    </BrowserRouter>,
+    document.getElementById('culinaryconservatory')
+);
 
-    let link = $(event.currentTarget);
-    let section = $(link.attr('href'));
-
-    $('html, body').animate({
-        scrollTop: section.offset().top
-    }, 900);
-});

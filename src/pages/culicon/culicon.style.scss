@@ -1,0 +1,98 @@
+#Culicon {
+    background-color: #262324;
+    color: #F0F0F0;
+    text-align: center;
+
+    h1, h2 {
+        color: #e6b9b8;
+    }
+
+    h1 {
+        text-indent: -200vw;
+        background-image: url('./../../assets/culicon-pink.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media all and (max-width: 600px) {
+            width: 85vw;
+        }
+    }
+
+    h2 {
+        &:before {
+            transform: translate(-110%, 50%);
+            background-image: linear-gradient(90deg, transparent, #e6b9b8);
+        }
+
+        &:after {
+            transform: translate(10%, 50%);
+            background-image: linear-gradient(90deg, #e6b9b8, transparent);
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 880px;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            // width: 25%;
+            margin-bottom: 10px;
+            font-size: .9rem;
+            flex: 1 0 25%;
+        }
+
+        @media all and (max-width: 600px) {
+            li {
+                width: 100%;
+                margin-bottom: 1vw;
+                flex: 1 0 auto;
+            }
+        }
+    }
+
+    .Subtitle {
+        font-size: .8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%);
+        background-image: url('./../../assets/chef.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 60px;
+        width: 60px;
+    }
+
+    &.Present {
+        h2:before, h2:after {
+            width: 6rem;
+            opacity: 1;
+
+            @media all and (max-width: 600px) {
+                width: 20vw;
+            }
+        }
+    }
+
+    @media all and (max-width: 600px) {
+        &:after {
+            width: 10vw;
+            height: 10vw;
+        }
+    }
+}

@@ -1,0 +1,377 @@
+@keyframes pulse {
+    to {
+        transform: translateY(-2%);
+        box-shadow: 2px 6px 6px rgba(0, 0, 0, .6);
+    }
+}
+
+@keyframes pulse-arrow {
+    to {
+        transform: translateX(-10%) translateY(10%) rotate(90deg);
+    }
+}
+
+.Card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s transform ease-out;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
+    background-color: #e6b9b8;
+
+    @media all and (max-width: 1024px) {
+        margin-bottom: 20vw;
+
+        &:hover { animation-name: none; }
+
+        &:after {
+            width: 5vw;
+            height: 5vw;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0
+        }
+    }
+
+    &[data-id="1"] {
+        .ProfileImage { background-image: url('./../../assets/sample.jpg'); }
+    }
+
+    &[data-id="2"] {
+        .ProfileImage { background-image: url('./../../assets/profile2.jpg'); }
+    }
+
+    &[data-id="3"] {
+        .ProfileImage { background-image: url('./../../assets/profile3.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 215vw;
+            }
+        }
+    }
+
+    &[data-id="4"] {
+        .ProfileImage { background-image: url('./../../assets/profile4.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 185vw;
+            }
+        }
+    }
+
+    &[data-id="5"] {
+        .ProfileImage { background-image: url('./../../assets/profile5.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 210vw;
+            }
+        }
+    }
+
+    &[data-id="6"] {
+        .ProfileImage { background-image: url('./../../assets/profile6.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 185vw;
+            }
+        }
+    }
+
+    &[data-id="7"] {
+        .ProfileImage { background-image: url('./../../assets/profile7.jpg'); }
+
+        &.Sub {
+            @media all and (max-width: 1024px) {
+                height: 205vw;
+            }
+        }
+    }
+
+    .ProfileImage {
+        background-image: url('./../../assets/sample.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .4;
+        transition: .3s opacity ease-out;
+
+        &:after {
+            content: '';
+            background-color: #FFF;
+            opacity: .2;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .Name {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 10px;
+        position: absolute;
+        z-index: 10;
+        color: #000;
+
+        @media all and (max-width: 1024px) {
+            font-size: 6vw;
+            margin-top: 4vw;
+            margin-left: 3vw;
+        }
+    }
+
+    .Info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #000;
+        transform: translateY(0%);
+        transition: .4s transform ease-out .3s, .9s opacity ease-out .3s;
+
+        .Skills {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
+        }
+
+        .Skill {
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        .SkillName {
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .SkillList {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .SkillItem{
+            text-align: left;
+            font-size: 11px;
+            letter-spacing: .2px;
+            line-height: 13px;
+
+            &:after {
+                content: '|';
+                padding: 0 5px;
+            }
+
+            &:last-of-type {
+                &:after { display: none; }
+            }
+        }
+
+        @media all and (max-width: 1024px) {
+            .Skills {
+                bottom: 3vw;
+                text-shadow: .5vw .5vw 2vw rgba(0, 0, 0, .3);
+            }
+
+            .Skill {
+                margin-top: 2.7vw;
+                margin-left: 3vw;
+            }
+
+            .SkillName {
+                font-size: 3.1vw;
+                margin-bottom: 1vw;
+            }
+
+            .SkillList { flex-direction: column; }
+
+            .SkillItem {
+                font-size: 2.5vw;
+                line-height: 2.8vw;
+
+                &:after { display: none; }
+            }
+        }
+    }
+
+    .Bio {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        left: 10px;
+        color: #000;
+        transform: translateY(120%);
+        transition: .4s transform ease-out, .3s opacity ease-out;
+        opacity: 0;
+
+        .Title {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .Copy {
+            font-size: 14px;
+            width: 95%;
+            text-align: justify;
+            margin-top: 10px;
+            line-height: 1.25;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+        }
+
+        @media all and (max-width: 1024px) {
+            bottom: 3vw;
+            left: 3vw;
+            width: 98%;
+
+            .Title {
+                font-size: 4vw;
+            }
+
+            .Copy {
+                font-size: 3.3vw;
+                margin-top: 3vw;
+                line-height: 1;
+                text-shadow: .5vw .5vw 2vw rgba(0, 0, 0, .3);
+            }
+        }
+    }
+
+    &.ShowBio {
+        &.Main {
+            .ProfileImage { opacity: .2; }
+        }
+
+        .Info {
+            transform: translateY(100%);
+            transition: .4s transform ease-out, .5s opacity ease-out .3s;
+            opacity: 0;
+        }
+
+        .Bio {
+            transform: translateY(0%);
+            opacity: 1;
+            transition: .4s transform ease-out .3s, .5s opacity ease-out .3s;
+        }
+    }
+
+    &.Main {
+        height: 500px;
+        width: 450px;
+
+        @media all and (max-width: 1024px) {
+            height: 130vw;
+            width: 100%;
+        }
+    }
+
+    &.Sub {
+        height: 275px;
+        width: 100%;
+        margin-top: 20px;
+        background-color: #000;
+
+        &:after { background-image: url('./../../assets/corner-arrow-white.png'); }
+
+        @media all and (max-width: 1024px) {
+            height: 210vw;
+            margin-top: 3vw;
+            border: .1vw solid rgba(255, 255, 255, .6);
+            box-sizing: border-box;
+        }
+
+        .ProfileImage {
+            width: 275px;
+            opacity: 1;
+
+            &:after {
+                background-color: #e6b9b8;
+                opacity: .4;
+            }
+
+            @media all and (max-width: 1024px) {
+                width: 100%;
+                height: 85vw;
+            }
+        }
+
+        .Name {
+            margin-left: 290px;
+            color: #FFF;
+
+            @media all and (max-width: 1024px) {
+                margin-left: 3vw;
+                margin-top: 90vw;
+            }
+        }
+
+        .Info {
+            left: 280px;
+            color: #FFF;
+            width: calc(100% - 275px);
+
+            .SkillName {
+                font-size: 14px;
+            }
+
+            @media all and (max-width: 1024px) {
+                left: 0;
+                width: 100%;
+
+                .SkillName {
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        .Bio {
+            left: 290px;
+            color: #FFF;
+
+            .Title {
+                font-size: 14px;
+            }
+
+            .Copy {
+                width: calc(98% - 285px);
+                font-size: 11px;
+            }
+
+            @media all and (max-width: 1024px) {
+                left: 3vw;
+                width: calc(100% - 6vw);
+
+                .Title {
+                    font-size: 4vw;
+                }
+
+                .Copy {
+                    width: 100%;
+                    font-size: 3.3vw;
+                }
+            }
+        }
+    }
+}
