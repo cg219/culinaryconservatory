@@ -8,11 +8,11 @@ class Nav extends React.Component {
 
         this.state = {
             links: [{
-                name: "Culicon Consultants",
-                url: "culicon"
-            }, {
                 name: "Procurement & Placements",
                 url: "procurement"
+            }, {
+                name: "Culicon Consultants",
+                url: "culicon"
             }]
         }
     }

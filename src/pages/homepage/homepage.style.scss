@@ -79,8 +79,9 @@
 
     .Culicon {
         .Image {
-            background-image: url('./../../assets/home1.jpg');
+            background-image: url('./../../assets/home1-new.jpg');
             background-position: center center;
+            transform: scaleX(-1);
         }
 
         @media all and (max-width: 600px) {
@@ -92,6 +93,7 @@
         .Image {
             background-image: url('./../../assets/home2-old.jpg');
             background-position: left top;
+            transform: scaleX(-1);
         }
 
         @media all and (max-width: 600px) {
