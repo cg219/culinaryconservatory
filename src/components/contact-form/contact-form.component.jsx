@@ -9,7 +9,7 @@ class ContactForm extends React.Component {
         this.state = {
             showThankyou: false,
             inputs: [{
-                id: 'entry.1090562520',
+                id: 'name',
                 config: {
                     placeholder: 'Name',
                     type: 'text',
@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.552902496',
+                id: 'email',
                 config: {
                     placeholder: 'Email',
                     type: 'email',
@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.1509799615',
+                id: 'phone',
                 config: {
                     placeholder: 'Phone',
                     type: 'text',
@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
                 },
                 field: 'input'
             }, {
-                id: 'entry.1555435740',
+                id: 'message',
                 config: {
                     placeholder: 'Message',
                     value: ''
@@ -84,13 +84,13 @@ class ContactForm extends React.Component {
     sendForm = event => {
         event.preventDefault();
 
-        let fm = new FormData();
+        let body = {};
 
-        this.state.inputs.map(input => fm.append(input.id, input.config.value));
+        this.state.inputs.map(input => body[input.id] = input.config.value);
 
         let options = {
             method: 'POST',
-            body: fm,
+            body: JSON.stringify(body),
             responseType: 'json',
             mode: 'no-cors',
             headers: {
@@ -98,7 +98,7 @@ class ContactForm extends React.Component {
             }
         };
 
-        fetch('https://docs.google.com/forms/d/e/1FAIpQLSdjBK_HZBt4veZoH24SZHsZMcPHbhjOkoPtQVw-qAPHtaaiWw/formResponse', options)
+        fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
             .then(response => this.clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
