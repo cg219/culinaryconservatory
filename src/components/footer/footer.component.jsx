@@ -15,13 +15,13 @@ export const Footer = (props) => {
         <div className={`${styles.Footer} ${!props.hasForm ? styles.NoForm : ''}`}>
             <div className={styles.Socials}>
                 <div className={styles.LinkedIn}>
-                    <a href="https://www.linkedin.com/in/robin-lewis-0134014" target="_blank"></a>
+                    <a tabIndex="0" href="https://www.linkedin.com/in/robin-lewis-0134014" target="_blank">LinkedIn</a>
                 </div>
                 <div className={styles.IG}>
-                    <a href="https://www.instagram.com/culinaryconservatory" target="_blank"></a>
+                    <a tabIndex="0" href="https://www.instagram.com/culinaryconservatory" target="_blank">Instagram</a>
                 </div>
                 <div className={styles.FB}>
-                    <a href="https://www.facebook.com/gotthejobsgotthepros" target="_blank"></a>
+                    <a tabIndex="0" href="https://www.facebook.com/gotthejobsgotthepros" target="_blank">Facebook</a>
                 </div>
             </div>
             { form }

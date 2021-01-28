@@ -10,6 +10,7 @@ class ContactForm extends React.Component {
             showThankyou: false,
             inputs: [{
                 id: 'name',
+                label: 'Name',
                 config: {
                     placeholder: 'Name',
                     type: 'text',
@@ -21,6 +22,7 @@ class ContactForm extends React.Component {
                 field: 'input'
             }, {
                 id: 'email',
+                label: 'Email',
                 config: {
                     placeholder: 'Email',
                     type: 'email',
@@ -32,6 +34,7 @@ class ContactForm extends React.Component {
                 field: 'input'
             }, {
                 id: 'phone',
+                label: 'Phone',
                 config: {
                     placeholder: 'Phone',
                     type: 'text',
@@ -43,6 +46,7 @@ class ContactForm extends React.Component {
                 field: 'input'
             }, {
                 id: 'message',
+                label: 'Message',
                 config: {
                     placeholder: 'Message',
                     value: ''
@@ -110,7 +114,8 @@ class ContactForm extends React.Component {
                 config={data.config}
                 changed={event => this.updateInput(event, data.id)}
                 field={data.field}
-                required={data.validation.required} />
+                required={data.validation.required}
+                label={data.label} />
         });
 
         return (

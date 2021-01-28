@@ -22,7 +22,7 @@ class Nav extends React.Component {
             <nav className={styles.Nav}>
                 <ul>
                 {
-                    this.state.links.map(({ name, url}, index) => <li key={name}><NavLink activeClassName={styles.Active} to={url}>{name}</NavLink></li>)
+                    this.state.links.map(({ name, url}, index) => <li key={name}><NavLink tabIndex="0" activeClassName={styles.Active} to={url}>{name}</NavLink></li>)
                 }
                 </ul>
             </nav>

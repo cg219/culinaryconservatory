@@ -12,10 +12,11 @@ class Input extends Component {
     }
 
     render() {
-        let field = this.props.field == 'textarea' ? <textarea {...this.props.config} onChange={this.props.changed} required={this.props.required} /> : <input {...this.props.config} onChange={this.props.changed} required={this.props.required} />;
+        let field = this.props.field == 'textarea' ? <textarea {...this.props.config} id={this.props.label} onChange={this.props.changed} required={this.props.required} /> : <input {...this.props.config} id={this.props.label} onChange={this.props.changed} required={this.props.required} />;
 
         return (
             <div className={styles.Input}>
+                <label htmlFor={this.props.label}>{this.props.label}</label>
                 {field}
             </div>
         )
