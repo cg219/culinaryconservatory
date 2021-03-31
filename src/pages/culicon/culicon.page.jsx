@@ -86,7 +86,7 @@ class CuliconPage extends React.Component {
                         name: "Human Resources Compliance",
                         list: ["Federal Entities", "CA, NY, IL, FL Labor laws", "Alcohol Awareness Education"]
                     }, {
-                        name: "Compensation 7 Benefits",
+                        name: "Compensation & Benefits",
                         list: ["Open Enrollment", "Payroll", "Taxes", "ACA", "Retirement"]
                     }, {
                         name: "Learning Management",
