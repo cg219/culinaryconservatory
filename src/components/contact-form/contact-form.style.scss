@@ -16,8 +16,40 @@
         margin: 0 0 1rem 0;
     }
 
+    &SubTitle {
+        color: #FFF;
+        font-size: .9rem;
+        margin: 0 1rem 0 0;
+    }
+
     @media all and (max-width: 600px) {
         width: 90vw;
+    }
+}
+
+.Button {
+    margin-right: .5rem;
+    cursor: pointer;
+    background-color: #F0F0F0;
+    border: 1px solid transparent;
+    outline: none;
+    padding: .5rem 1rem;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    transition: .3s color ease-out, .3s background-color ease-out, .3s border-color ease-out;
+    cursor: pointer;
+    letter-spacing: .02rem;
+
+    &:hover {
+        background-color: #262324;
+        color: #e6b9b8;
+        border-color: rgba(red(#e6b9b8), green(#e6b9b8), blue(#e6b9b8), .4);
+    }
+
+    &Pressed {
+        background-color: #262324;
+        color: #e6b9b8;
+        border-color: rgba(red(#e6b9b8), green(#e6b9b8), blue(#e6b9b8), .4);
     }
 }
 

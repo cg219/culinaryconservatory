@@ -8,6 +8,7 @@ class ContactForm extends React.Component {
 
         this.state = {
             showThankyou: false,
+            showClient: true,
             inputs: [{
                 id: 'name',
                 label: 'Name',
@@ -55,16 +56,36 @@ class ContactForm extends React.Component {
                     required: true
                 },
                 field: 'textarea'
+            }, {
+                id: 'resume',
+                label: 'Resume',
+                config: {
+                    placeholder: 'Resume',
+                    value: '',
+                    file: '',
+                    type: 'file'
+                },
+                validation: {
+                    required: false
+                },
+                field: 'input',
+                changed: this.onFileAdded
             }]
         }
     }
 
-    updateInput = (event, id) => {
+    onFileAdded = (event, id) => {
+        console.log(event.target.files[0]);
+        this.updateInput(event, id, event.target.files[0]);
+    }
+
+    updateInput = (event, id, file) => {
         let newValue = event.target.value;
         let newState = { ...this.state };
 
         newState.inputs = this.state.inputs.filter(element => {
             if (element.id === id) element.config.value = newValue;
+            if (file && element.id === id) element.config.file = file;
             return element;
         });
         newState.showThankyou = false;
@@ -77,6 +98,7 @@ class ContactForm extends React.Component {
 
         newState.inputs = this.state.inputs.map(element => {
             element.config.value = "";
+            element.config.file = null;
             return element;
         });
 
@@ -89,20 +111,22 @@ class ContactForm extends React.Component {
         event.preventDefault();
 
         let body = {};
+        let formData = new FormData();
 
-        this.state.inputs.map(input => body[input.id] = input.config.value);
+        this.state.inputs.map(input => {
+            body[input.id] = input.config.file || input.config.value;
+            formData.append(input.id, input.config.file || input.config.value);
+        });
 
         let options = {
             method: 'POST',
-            body: JSON.stringify(body),
+            body: formData,
             responseType: 'json',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            mode: 'no-cors'
         };
 
-        fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
+        // fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
+        fetch('http://localhost:5001/culinary-conservatory/us-central1/email', options)
             .then(response => this.clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
@@ -112,7 +136,7 @@ class ContactForm extends React.Component {
             return <Input
                 key={data.id}
                 config={data.config}
-                changed={event => this.updateInput(event, data.id)}
+                changed={data.changed ? event => data.changed(event, data.id) : event => this.updateInput(event, data.id)}
                 field={data.field}
                 required={data.validation.required}
                 label={data.label} />
@@ -120,7 +144,13 @@ class ContactForm extends React.Component {
 
         return (
             <div className={styles.ContactForm}>
-                <h3 className={styles.ContactFormTitle}>Contact Us</h3>
+                <div className={styles.ContactFormHeader}>
+                    <h3 className={styles.ContactFormTitle}>Contact Us</h3>
+                    <span className={styles.ContactFormSubTitle}>Inquiry Type: </span>
+                    <button className={styles.Button}>Client</button>
+                    <button className={styles.Button}>Candidate</button>
+                </div>
+
                 <form onSubmit={ this.sendForm }>
                     { inputs }
                     <input className={styles.InputSubmit} value="Submit" type="submit" />
