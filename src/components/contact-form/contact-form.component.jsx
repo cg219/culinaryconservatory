@@ -63,7 +63,9 @@ class ContactForm extends React.Component {
                     placeholder: 'Resume',
                     value: '',
                     file: '',
-                    type: 'file'
+                    type: 'file',
+                    accept: '.doc, .docx, .word, .pdf',
+                    className: styles.FileInput
                 },
                 validation: {
                     required: false
@@ -74,9 +76,28 @@ class ContactForm extends React.Component {
         }
     }
 
+    onTypeClick = event => {
+        let button = event.target;
+        let type = event.target.id;
+        let newState = { ...this.state };
+
+        newState.showClient = type == 'client' ? true : false;
+        this.setState(newState)
+    }
+
     onFileAdded = (event, id) => {
         console.log(event.target.files[0]);
         this.updateInput(event, id, event.target.files[0]);
+    }
+
+    getInputs = isClient => {
+        return this.state.inputs.filter(state => {
+            if (isClient) {
+                return state.config.type != 'file';
+            } else {
+                return state
+            }
+        })
     }
 
     updateInput = (event, id, file) => {
@@ -125,14 +146,14 @@ class ContactForm extends React.Component {
             mode: 'no-cors'
         };
 
-        // fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
-        fetch('http://localhost:5001/culinary-conservatory/us-central1/email', options)
+        fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
             .then(response => this.clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
 
     render() {
-        let inputs = this.state.inputs.map(data => {
+        let inputStates = this.getInputs(this.state.showClient);
+        let inputs = inputStates.map(data => {
             return <Input
                 key={data.id}
                 config={data.config}
@@ -147,8 +168,8 @@ class ContactForm extends React.Component {
                 <div className={styles.ContactFormHeader}>
                     <h3 className={styles.ContactFormTitle}>Contact Us</h3>
                     <span className={styles.ContactFormSubTitle}>Inquiry Type: </span>
-                    <button className={styles.Button}>Client</button>
-                    <button className={styles.Button}>Candidate</button>
+                    <button className={`${styles.Button} ${this.state.showClient ? styles.ButtonPressed : '' }`} onClick={this.onTypeClick} id='client'>Client</button>
+                    <button className={`${styles.Button} ${this.state.showClient ? '' : styles.ButtonPressed }`} onClick={this.onTypeClick} id='candidate'>Candidate</button>
                 </div>
 
                 <form onSubmit={ this.sendForm }>
