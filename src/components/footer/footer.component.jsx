@@ -8,7 +8,7 @@ export const Footer = (props) => {
     let form = null;
 
     if (props.hasForm) {
-        form = <ContactForm showClient={props.showClient} />
+        form = <ContactForm />
     }
 
     return (

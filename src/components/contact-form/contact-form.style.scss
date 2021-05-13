@@ -53,18 +53,6 @@
     }
 }
 
-.FileInput {
-    background-color: blue;
-
-    &::-webkit-file-upload-button { visibility: hidden; }
-    &:before {
-        content: 'Resume';
-        display: inline-block;
-        padding-left: .4rem;
-        opacity: .6;
-    }
-}
-
 .InputGroup {
     display: flex;
     flex-direction: row;
