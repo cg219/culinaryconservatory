@@ -17,6 +17,7 @@ jobs:
       - run: npm ci
       - run: npm run preview:build
       - run: cp vercel.json distpreview/vercel.json
+      - run: cd distpreview
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v19
         with:
