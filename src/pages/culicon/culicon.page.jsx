@@ -75,7 +75,7 @@ class CuliconPage extends React.Component {
                 }, {
                     id: "3",
                     name: "Suzy Oklin—SHRM-CP, MBA",
-                    type: "Sub",
+                    type: "Main",
                     bio: `Suzy holds her MBA focused in Human Resources from Florida International University, an HR Labor Law certification from Loyola Marymount University, and is both a member of and a certified SHRM-CP professional. Her career in hospitality is one of diverse experience starting with tenures on the floor up to General Manager and transitioning into a Human Resources Director. 
                     <br /><br />Her passion for HR was born through her early career working with Aoki Restaurant Group in Atlanta & South Florida. These formative years honed her expertise in employee development, training, recruiting, and learning management. Shaping her ideology and best, successful practices toward creating dynamic teams in difficult staffing markets. Suzy then joined Miami’s James Beard awarded Juvia Restaurant Group. As the Corporate Human Resources Director, she led the development of a technology based Corporate HR department that supported a rapid company expansion achieving 5 units of 600+ employees in under 5 years. Suzy’s most recent projects brought her to Los Angeles to work with Lending USA.  Together they re-imagined and developed a fully digitized Human Resources department from scratch.
                     <br /><br />Suzy is continually educating herself to stay at the forefront of new Human Resources trends, legislation, and technology through a variety of Human Resources courses.  She is pursuing a PhD, to become an educator in Human Resources Management subjects. In her spare time, she has participated in a number of mentorships and learning workshops at her alma mater.`,
@@ -95,7 +95,7 @@ class CuliconPage extends React.Component {
                 }, {
                     id: "4",
                     name: "Nish Patel",
-                    type: "Sub",
+                    type: "Main",
                     bio: `Nish earned his Master’s in accounting early on while working in London, he then joined Paperchase India and was quickly earmarked to lead their US expansion in 2010.  Now he is the Managing Partner of Paperchase North America and is the brainchild behind one of the first  successful Corporate Food Delivery operations in NYC.
                     <br /><br />Paperchase is a hospitality bookkeeping firm that represents QSR to Michelin operations worldwide, their niche expertise, producing analytical reporting, and outsourcing of day-to-day finance operations. Today they have over 500 restaurants in the US alone and continue to grow with offices in NYC, Miami & London. The spectrum of concepts they represent extend from groups like ZUMA, Dinex by Daniel Boulud, and The Fat Duck to Pincho and Five Guys.
                     <br /><br />Nish and Paperchase have partnered with the Culinary Conservatory to offer a quick and effective resource to financial SOP implementation for operations of all sizes and revenue streams.`,
@@ -106,7 +106,7 @@ class CuliconPage extends React.Component {
                 }, {
                     id: "5",
                     name: "Gregg Nelson",
-                    type: "Sub",
+                    type: "Main",
                     bio: `A graduate of Cornell University’s School of Hotel & Restaurant Administration and a former Officer in the US Marine Corps; Gregg holds an impressive background as an industry professional with experience in several major dining markets and luxury destinations of NYC, Washington DC, San Francisco, Seattle, and Colorado.
                     <br /><br />Gregg’s career took off as a task force manager for Drew Nieporent’s Myriad Restaurant Group, with the scope of launching F&B programs in “W” and “Interstate” Hotels’ properties around the country. Once settled in NYC, he continued at Robert DeNiro’s “Tribeca Grill” & “Layla”. Eventually making the transition to ✰✰✰Michelin Eleven Madison Park, as a service professional.
                     <br /><br />Progressed to restaurateur status, Gregg and partners, transformed a NYC jazz club into the NYT’s lauded, East Village favorite, “The Redhead”. The foundation to his successful company that offered consultancy services for new restaurant openings and culinary brand extensions into the retail sector. His recent work has been in the D.C. market working with several hospitality groups; Jamie Leed’s, JL Restaurant Group, and during the start-up phases with KNEAD Hospitality & Design with James Beard Chef Edward Lee, as well as with FoodShed Hospitality by James Beard Chef Spike Gjerde.  He is now transitioning into hospitality consulting and Procurement & Placements with the Culinary Conservatory.`,
@@ -123,7 +123,7 @@ class CuliconPage extends React.Component {
                 }, {
                     id: "7",
                     name: "Ethan Kelley",
-                    type: "Sub",
+                    type: "Main",
                     bio: `Ethan started his career in Spirits with an exhaustive journey fortifying his expertise through extensive travel to distilleries, cooperages, copper smiths around the world.  His formative career started behind the bar both on “the stick” and as a Bar Manager in the North East. He propelled to a being a regarded industry resource in 2004 when he partnered with Flavien Desoblin to develop and oversee the beverage program at the Brandy Library, the globally renowned spirits cellar and drinking lounge in Tribeca NYC.  After achieving numerous global awards for selection, breadth of knowledge, and staff excellence, Ethan went on to consult on a variety of venues from high volume establishments to exclusive connoisseur club lounges around the country.
                     <br /><br />Since his induction to the importer and supplier sector, he has become a well-regarded resource for new producers and distribution teams. He has been a judge for both the NY Spirits Awards Competition and Paul Pacult’s Ultimate Spirits Challenge; featured as an industry expert on The History Channel, MSNBC, FOX News and multiple appearances in the NY Times. Ethan is the Membership Director and Curator for the Spirits Network where he also writes his Blogs for curious enthusiasts.  You will also find him debating all matter of boozy banter with Flavien Desoblin on their podcast, “Make Mine neat”.`,
                     skills: [{

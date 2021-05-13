@@ -8,7 +8,7 @@ class ContactForm extends React.Component {
 
         this.state = {
             showThankyou: false,
-            showClient: true,
+            showClient: false,
             inputs: [{
                 id: 'name',
                 label: 'Name',
@@ -74,6 +74,12 @@ class ContactForm extends React.Component {
                 changed: this.onFileAdded
             }]
         }
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        state.showClient = props.showClient || false;
+
+        return state
     }
 
     onTypeClick = event => {

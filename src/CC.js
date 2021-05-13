@@ -14,22 +14,16 @@ export const CC = () => (
             <Route path='/procurement'>
                 <Nav />
                 <ProcurementPage />
+                <Footer hasForm showClient={false} />
             </Route>
             <Route path='/culicon'>
                 <Nav />
                 <CuliconPage />
+                <Footer hasForm showClient={true} />
             </Route>
             <Route path='/'>
                 <Homepage />
-            </Route>
-        </Switch>
-
-        <Switch>
-            <Route exact path='/'>
                 <Footer />
-            </Route>
-            <Route path='/:anything'>
-                <Footer hasForm />
             </Route>
         </Switch>
     </div>
