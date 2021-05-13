@@ -3,5 +3,5 @@
     "github": {
         "enabled": false
     },
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    "rewrites": [{ "source": "/distpreview/(.*)", "destination": "/index.html" }]
 }
