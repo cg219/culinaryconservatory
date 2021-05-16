@@ -73,26 +73,6 @@ class CuliconPage extends React.Component {
                         list: [["BOH Management ", "Kitchen Guide Books ", "Critical Training Pathways"], ["Line Level Recruitment & Training"]]
                     }]
                 }, {
-                    id: "3",
-                    name: "Suzy Oklin—SHRM-CP, MBA",
-                    type: "Main",
-                    bio: `Suzy holds her MBA focused in Human Resources from Florida International University, an HR Labor Law certification from Loyola Marymount University, and is both a member of and a certified SHRM-CP professional. Her career in hospitality is one of diverse experience starting with tenures on the floor up to General Manager and transitioning into a Human Resources Director. 
-                    <br /><br />Her passion for HR was born through her early career working with Aoki Restaurant Group in Atlanta & South Florida. These formative years honed her expertise in employee development, training, recruiting, and learning management. Shaping her ideology and best, successful practices toward creating dynamic teams in difficult staffing markets. Suzy then joined Miami’s James Beard awarded Juvia Restaurant Group. As the Corporate Human Resources Director, she led the development of a technology based Corporate HR department that supported a rapid company expansion achieving 5 units of 600+ employees in under 5 years. Suzy’s most recent projects brought her to Los Angeles to work with Lending USA.  Together they re-imagined and developed a fully digitized Human Resources department from scratch.
-                    <br /><br />Suzy is continually educating herself to stay at the forefront of new Human Resources trends, legislation, and technology through a variety of Human Resources courses.  She is pursuing a PhD, to become an educator in Human Resources Management subjects. In her spare time, she has participated in a number of mentorships and learning workshops at her alma mater.`,
-                    skills: [{
-                        name: "HR Generalist & Administrative Modernization",
-                        list: [["HR Digitization of Payroll, ATS & HRIS", "Policy & Handbook Development"], ["Audit Leadership", "Hourly Recruitment"]]
-                    }, {
-                        name: "Human Resources Compliance",
-                        list: ["Federal Entities", "CA, NY, IL, FL Labor laws", "Alcohol Awareness Education"]
-                    }, {
-                        name: "Compensation & Benefits",
-                        list: ["Open Enrollment", "Payroll", "Taxes", "ACA", "Retirement"]
-                    }, {
-                        name: "Learning Management",
-                        list: ["LMS Implementation", "Progressive Training", "Required Training", "OSHA"]
-                    }]
-                }, {
                     id: "4",
                     name: "Nish Patel",
                     type: "Main",
@@ -141,6 +121,26 @@ class CuliconPage extends React.Component {
                     }]
                 }],
                 network: [{
+                    id: "3",
+                    name: "Suzy Oklin—SHRM-CP, MBA",
+                    type: "Sub",
+                    bio: `Suzy holds her MBA focused in Human Resources from Florida International University, an HR Labor Law certification from Loyola Marymount University, and is both a member of and a certified SHRM-CP professional. Her career in hospitality is one of diverse experience starting with tenures on the floor up to General Manager and transitioning into a Human Resources Director. 
+                    <br /><br />Her passion for HR was born through her early career working with Aoki Restaurant Group in Atlanta & South Florida. These formative years honed her expertise in employee development, training, recruiting, and learning management. Shaping her ideology and best, successful practices toward creating dynamic teams in difficult staffing markets. Suzy then joined Miami’s James Beard awarded Juvia Restaurant Group. As the Corporate Human Resources Director, she led the development of a technology based Corporate HR department that supported a rapid company expansion achieving 5 units of 600+ employees in under 5 years. Suzy’s most recent projects brought her to Los Angeles to work with Lending USA.  Together they re-imagined and developed a fully digitized Human Resources department from scratch.
+                    <br /><br />Suzy is continually educating herself to stay at the forefront of new Human Resources trends, legislation, and technology through a variety of Human Resources courses.  She is pursuing a PhD, to become an educator in Human Resources Management subjects. In her spare time, she has participated in a number of mentorships and learning workshops at her alma mater.`,
+                    skills: [{
+                        name: "HR Generalist & Administrative Modernization",
+                        list: [["HR Digitization of Payroll, ATS & HRIS", "Policy & Handbook Development"], ["Audit Leadership", "Hourly Recruitment"]]
+                    }, {
+                        name: "Human Resources Compliance",
+                        list: ["Federal Entities", "CA, NY, IL, FL Labor laws", "Alcohol Awareness Education"]
+                    }, {
+                        name: "Compensation & Benefits",
+                        list: ["Open Enrollment", "Payroll", "Taxes", "ACA", "Retirement"]
+                    }, {
+                        name: "Learning Management",
+                        list: ["LMS Implementation", "Progressive Training", "Required Training", "OSHA"]
+                    }]
+                }, {
                     id: "6",
                     name: "Culinary Specialist",
                     type: "Sub",

@@ -1,146 +1,113 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useTransition, animated } from "react-spring";
 import styles from "./contact-form.style.scss";
 import { Input } from "./../input/input.component";
 
-class ContactForm extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            showThankyou: false,
-            showClient: false,
-            inputs: [{
-                id: 'name',
-                label: 'Name',
-                config: {
-                    placeholder: 'Name',
-                    type: 'text',
-                    value: ''
-                },
-                validation: {
-                    required: true
-                },
-                field: 'input'
-            }, {
-                id: 'email',
-                label: 'Email',
-                config: {
-                    placeholder: 'Email',
-                    type: 'email',
-                    value: ''
-                },
-                validation: {
-                    required: true
-                },
-                field: 'input'
-            }, {
-                id: 'phone',
-                label: 'Phone',
-                config: {
-                    placeholder: 'Phone',
-                    type: 'text',
-                    value: ''
-                },
-                validation: {
-                    required: true
-                },
-                field: 'input'
-            }, {
-                id: 'message',
-                label: 'Message',
-                config: {
-                    placeholder: 'Message',
-                    value: ''
-                },
-                validation: {
-                    required: true
-                },
-                field: 'textarea'
-            }, {
-                id: 'resume',
-                label: 'Resume',
-                config: {
-                    placeholder: 'Resume',
-                    value: '',
-                    file: '',
-                    type: 'file',
-                    accept: '.doc, .docx, .word, .pdf',
-                    className: styles.FileInput
-                },
-                validation: {
-                    required: false
-                },
-                field: 'input',
-                changed: this.onFileAdded
-            }]
+export const ContactForm = props => {
+    const [ showThankYou, setShowThankYou ] = useState(false);
+    const [ showClient, setShowClient ] = useState(false);
+    const [ inputs, setInputs ] = useState([
+        {
+            id: 'name',
+            label: 'Name',
+            config: {
+                placeholder: 'Name',
+                type: 'text',
+                value: ''
+            },
+            validation: {
+                required: true
+            },
+            field: 'input'
+        }, {
+            id: 'email',
+            label: 'Email',
+            config: {
+                placeholder: 'Email',
+                type: 'email',
+                value: ''
+            },
+            validation: {
+                required: true
+            },
+            field: 'input'
+        }, {
+            id: 'phone',
+            label: 'Phone',
+            config: {
+                placeholder: 'Phone',
+                type: 'text',
+                value: ''
+            },
+            validation: {
+                required: true
+            },
+            field: 'input'
+        }, {
+            id: 'message',
+            label: 'Message',
+            config: {
+                placeholder: 'Message',
+                value: ''
+            },
+            validation: {
+                required: true
+            },
+            field: 'textarea'
+        }, {
+            id: 'resume',
+            label: 'Resume',
+            config: {
+                placeholder: 'Resume',
+                value: '',
+                file: '',
+                type: 'file',
+                accept: '.doc, .docx, .word, .pdf',
+                className: styles.FileInput
+            },
+            validation: {
+                required: false
+            },
+            field: 'input',
+            changed: onFileAdded
         }
-    }
+    ]);
 
-    static getDerivedStateFromProps(props, state) {
-        state.showClient = props.showClient || false;
-
-        return state
-    }
-
-    onTypeClick = event => {
-        let button = event.target;
+    const getInputs = isClient => inputs.filter(state => isClient ? state.config.type != 'file' : state);
+    const onTypeClick = event => {
         let type = event.target.id;
-        let newState = { ...this.state };
-
-        newState.showClient = type == 'client' ? true : false;
-        this.setState(newState)
-    }
-
-    onFileAdded = (event, id) => {
-        console.log(event.target.files[0]);
-        this.updateInput(event, id, event.target.files[0]);
-    }
-
-    getInputs = isClient => {
-        return this.state.inputs.filter(state => {
-            if (isClient) {
-                return state.config.type != 'file';
-            } else {
-                return state
-            }
-        })
-    }
-
-    updateInput = (event, id, file) => {
+        setShowClient(type == 'client' ? true : false)
+    };
+    const onFileAdded = (event, id) => updateInput(event, id, event.target.files[0]);
+    const updateInput = (event, id, file) => {
         let newValue = event.target.value;
-        let newState = { ...this.state };
-
-        newState.inputs = this.state.inputs.filter(element => {
+        let newInputs = inputs.filter(element => {
             if (element.id === id) element.config.value = newValue;
             if (file && element.id === id) element.config.file = file;
             return element;
         });
-        newState.showThankyou = false;
 
-        this.setState(newState);
+        setShowThankYou(false);
+        setInputs(newInputs);
     }
-
-    clearInputs = () => {
-        let newState = { ...this.state };
-
-        newState.inputs = this.state.inputs.map(element => {
+    const clearInputs = () => {
+        let newInputs = inputs.map(element => {
             element.config.value = "";
             element.config.file = null;
             return element;
         });
 
-        newState.showThankyou = true;
-
-        this.setState(newState);
+        setShowThankYou(true);
+        setInputs(newInputs);
     }
 
-    sendForm = event => {
+    const sendForm = event => {
         event.preventDefault();
 
         let body = {};
         let formData = new FormData();
 
-        this.state.inputs.map(input => {
+        inputs.map(input => {
             body[input.id] = input.config.file || input.config.value;
             formData.append(input.id, input.config.file || input.config.value);
         });
@@ -153,39 +120,44 @@ class ContactForm extends React.Component {
         };
 
         fetch('https://us-central1-culinary-conservatory.cloudfunctions.net/email', options)
-            .then(response => this.clearInputs())
+            .then(response => clearInputs())
             .catch(error => console.log(`Error: ${error}`))
     }
 
-    render() {
-        let inputStates = this.getInputs(this.state.showClient);
-        let inputs = inputStates.map(data => {
-            return <Input
-                key={data.id}
-                config={data.config}
-                changed={data.changed ? event => data.changed(event, data.id) : event => this.updateInput(event, data.id)}
-                field={data.field}
-                required={data.validation.required}
-                label={data.label} />
-        });
+    let inputStates = getInputs(showClient);
+    // let transition = useTransition(inputStates, {
+    //     from: { opacity: 0 },
+    //     enter: { opacity: 1 },
+    //     leave: { opacity: 0 }
+    // });
+    let inputsMarkup = inputStates.map((data, index) => {
+        return <Input
+            key={data.id}
+            config={data.config}
+            changed={data.changed ? event => data.changed(event, data.id) : event => updateInput(event, data.id)}
+            field={data.field}
+            required={data.validation.required}
+            label={data.label} />
+    });
 
-        return (
-            <div className={styles.ContactForm}>
-                <div className={styles.ContactFormHeader}>
-                    <h3 className={styles.ContactFormTitle}>Contact Us</h3>
-                    <span className={styles.ContactFormSubTitle}>Inquiry Type: </span>
-                    <button className={`${styles.Button} ${this.state.showClient ? styles.ButtonPressed : '' }`} onClick={this.onTypeClick} id='client'>Client</button>
-                    <button className={`${styles.Button} ${this.state.showClient ? '' : styles.ButtonPressed }`} onClick={this.onTypeClick} id='candidate'>Candidate</button>
-                </div>
+    useEffect(() => {
+        setShowClient(props.showClient || false);
+    }, [props.showClient])
 
-                <form onSubmit={ this.sendForm }>
-                    { inputs }
-                    <input className={styles.InputSubmit} value="Submit" type="submit" />
-                </form>
-                <div className={`${styles.ThankYou} ${this.state.showThankyou ? styles.Show : ''}`}><span>Thank You for your Inquiry</span></div>
+    return (
+        <div className={styles.ContactForm}>
+            <div className={styles.ContactFormHeader}>
+                <h3 className={styles.ContactFormTitle}>Contact Us</h3>
+                <span className={styles.ContactFormSubTitle}>Inquiry Type: </span>
+                <button className={`${styles.Button} ${showClient ? styles.ButtonPressed : '' }`} onClick={onTypeClick} id='client'>Client</button>
+                <button className={`${styles.Button} ${showClient ? '' : styles.ButtonPressed }`} onClick={onTypeClick} id='candidate'>Candidate</button>
             </div>
-        )
-    }
-}
 
-export { ContactForm };
+            <form onSubmit={ sendForm }>
+                { inputsMarkup }
+                <input className={styles.InputSubmit} value="Submit" type="submit" />
+            </form>
+            <div className={`${styles.ThankYou} ${showThankYou ? styles.Show : ''}`}><span>Thank You for your Inquiry</span></div>
+        </div>
+    )
+}
